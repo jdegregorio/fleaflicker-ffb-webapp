@@ -380,17 +380,16 @@ def getMatchups( league_id , start_season, end_season ):
     df = df.pivot(index = 'ID', columns = 'key', values = 'val')
     df.reset_index(inplace = True)
 
+    # Remove missing values (not played yet)
+    df = df[df.result.notnull()]
+
     # Split ID back into individual columns
     df[['team_id', 'season', 'week']] = df.ID.str.split(',', expand=True)
     df = df[['team_id', 'season', 'week', 'team_id_opp', 'matchup_type', 'result', 'score']]
 
-    # Remove missing values (not played yet)
-    df = df_matchups[df_matchups.result.notnull()]
-
     # Split Scores
     df[['score_team', 'score_opp']] = df.score.str.split('-', expand=True)
     df.drop(columns = ['score'], inplace=True)
-
 
     return df
 
@@ -399,8 +398,8 @@ league_id = '154290'
 
 #Run Script
 df_points = getPoints(league_id , 3, 2018, 2014)
-df_matchups = getMatchups(league_id, 2, 2018, 2014)
+df_matchups = getMatchups(league_id, 2018, 2014)
 
 #Save Data
-df_points.to_csv("../Data/points.csv", index = False, encoding = "utf-8")
-df_matchups.to_csv("../Data/matchups.csv", index = False, encoding = "utf-8")
+df_points.to_csv("./Data/points.csv", index = False, encoding = "utf-8")
+df_matchups.to_csv("./Data/matchups.csv", index = False, encoding = "utf-8")
