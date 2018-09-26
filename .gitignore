@@ -6,6 +6,9 @@ __pycache__/
 # ignore generated html files,
 *.html
 
+# ignore powerbi files
+*.pbix
+
 # C extensions
 *.so
 
