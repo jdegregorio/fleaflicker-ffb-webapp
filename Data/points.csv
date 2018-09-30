@@ -1,4 +1,4 @@
-team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_team,player_pos,set_pos,points
+team_id,manager_id,manager_name,team_name,season,week,player_name,player_id,player_team,player_pos,set_pos,points
 1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,1,Alshon Jeffery,8422,CHI,WR,WR,7.1
 1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,1,Cam Newton,7378,CAR,QB,BN,0
 1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,1,Delanie Walker,4353,TEN,TE,TE,9.7
@@ -49,7 +49,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,12,Bobby Rainey,8661,TB,RB,BN,2.1
 1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,12,Chandler Catanzaro,10519,ARI,K,K,3
 1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,12,Charles Sims,10276,TB,RB,RB,3.3
-1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,12,Christine Michael,9386,IND,RB,BN,0
+1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,12,Christine Michael,9386,FA,RB,BN,0
 1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,12,Dallas Cowboys,2336,DAL,D/ST,D/ST,4
 1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,12,Delanie Walker,4353,TEN,TE,BN,15.5
 1073358,663599,TimMartens,Dropping 3rd Round Picks for Kickers,2014,12,Jay Cutler,4077,CHI,QB,QB,7.2
@@ -1172,6 +1172,30 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073358,663599,TimMartens,Saquon Barksdale,2018,2,Robby Anderson,12361,NYJ,WR,WR/TE,0.7
 1073358,663599,TimMartens,Saquon Barksdale,2018,2,Saquon Barkley,13778,NYG,RB,RB,10.8
 1073358,663599,TimMartens,Saquon Barksdale,2018,2,Will Dissly,14475,SEA,TE,BN,10.2
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Anthony Miller,13782,CHI,WR,TAXI,3.5
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Antonio Brown,6660,PIT,WR,WR,11
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Austin Ekeler,13325,LAC,RB,RB/WR/TE,5.1
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Baker Mayfield,13758,CLE,QB,TAXI,9.84
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Carlos Hyde,10335,CLE,RB,RB,22.3
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,D'Onta Foreman,12987,HOU,RB,BN,0
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Dede Westbrook,13052,JAC,WR,BN,3.1
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Delanie Walker,4353,TEN,TE,IR,0
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Denver Broncos,2337,DEN,D/ST,D/ST,2
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Jakeem Grant,12182,MIA,WR,BN,19
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Jesse James,11366,PIT,TE,TE,0.7
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Josh Doctson,12035,WAS,WR,BN,0
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Julian Edelman,6269,NE,WR,BN,0
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Kenneth Dixon,12150,BAL,RB,IR,0
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Larry Fitzgerald,1732,ARI,WR,WR/TE,0.9
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Mark Ingram,7371,NO,RB,BN,0
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Martavis Bryant,10415,OAK,WR,BN,3.4
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Marvin Jones,8429,DET,WR,WR,12.9
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Mike Gesicki,13845,MIA,TE,TAXI,3.1
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Nick Chubb,13802,CLE,RB,TAXI,0.6
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Robby Anderson,12361,NYJ,WR,BN,0.2
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Ryan Fitzpatrick,3011,TB,QB,QB,25.14
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Saquon Barkley,13778,NYG,RB,RB,17.7
+1073358,663599,TimMartens,Saquon Barksdale,2018,3,Will Dissly,14475,SEA,TE,BN,0.4
 1073361,663601,CameronRouzer,Dudley Boyz,2015,1,Allen Robinson,10305,JAC,WR,WR,2.7
 1073361,663601,CameronRouzer,Dudley Boyz,2015,1,Andrew Luck,8382,IND,QB,QB,17.72
 1073361,663601,CameronRouzer,Dudley Boyz,2015,1,Baltimore Ravens,2330,BAL,D/ST,BN,13
@@ -2085,6 +2109,28 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073361,663601,CameronRouzer,Dudley Boyz,2018,2,Travis Kelce,9360,KC,TE,TE,22.9
 1073361,663601,CameronRouzer,Dudley Boyz,2018,2,Trey Burton,10823,CHI,TE,WR/TE,8.2
 1073361,663601,CameronRouzer,Dudley Boyz,2018,2,Tyler Eifert,9305,CIN,TE,BN,2.3
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Alex Collins,12164,BAL,RB,RB,13.4
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Allen Robinson,10305,CHI,WR,WR,5
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Andrew Luck,8382,IND,QB,BN,13.86
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,C.J. Anderson,9700,CAR,RB,BN,9.3
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Chris Godwin,12926,TB,WR,WR/TE,11.4
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Christian Kirk,13806,ARI,WR,TAXI,9
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,D.J. Chark,13790,JAC,WR,TAXI,0
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Dallas Cowboys,2336,DAL,D/ST,D/ST,2
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Daurice Fountain,13899,IND,WR,TAXI,0
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,David Johnson,11187,ARI,RB,RB,12.1
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Demaryius Thomas,6581,DEN,WR,WR,6.3
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Deshaun Watson,12919,HOU,QB,QB,25
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Doug Martin,8613,OAK,RB,BN,4.3
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Jarius Wright,8525,CAR,WR,BN,0.7
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Mike Williams,12890,LAC,WR,BN,20.1
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Randall Cobb,7401,GB,WR,BN,0.3
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Rashaad Penny,13772,SEA,RB,TAXI,0.5
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Terrelle Pryor,8350,NYJ,WR,BN,2.5
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Tevin Coleman,11188,ATL,RB,RB/WR/TE,10.7
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Travis Kelce,9360,KC,TE,TE,11.4
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Trey Burton,10823,CHI,TE,BN,5.5
+1073361,663601,CameronRouzer,Dudley Boyz,2018,3,Tyler Eifert,9305,CIN,TE,BN,7.4
 1073361,663601,CameronRouzer,Gordon('s) Brown(s),2014,1,Andre Johnson,566,HOU,WR,WR,9.3
 1073361,663601,CameronRouzer,Gordon('s) Brown(s),2014,1,Andrew Luck,8382,IND,QB,QB,26.7
 1073361,663601,CameronRouzer,Gordon('s) Brown(s),2014,1,Bishop Sankey,10272,TEN,RB,BN,2.5
@@ -3220,6 +3266,27 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,2,Ricky Seals-Jones,13168,ARI,TE,BN,1.7
 1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,2,Theo Riddick,9445,DET,RB,RB,4.7
 1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,2,Will Fuller,12023,HOU,WR,WR,17.3
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Alex Smith,3356,WAS,QB,BN,16.8
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Amari Cooper,11177,OAK,WR,RB/WR/TE,1.7
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Brandin Cooks,10242,LAR,WR,WR/TE,9
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Calvin Ridley,13776,ATL,WR,BN,33.5
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Cam Newton,7378,CAR,QB,QB,29.6
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,DeSean Jackson,5324,TB,WR,WR,3.7
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Deon Cain,13970,IND,WR,TAXI,0
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Devonta Freeman,10324,ATL,RB,BN,0
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,J'Mon Moore,13884,GB,WR,TAXI,0
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Jamaal Williams,13040,GB,RB,RB,4.5
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Kyle Rudolph,7444,MIN,TE,TE,10.8
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Le'Veon Bell,9378,PIT,RB,BN,0
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,LeGarrette Blount,6838,DET,RB,BN,6.5
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Los Angeles Rams,2356,LAR,D/ST,D/ST,12
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Mike Wallace,6121,PHI,WR,BN,0
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Mitchell Trubisky,12893,CHI,QB,BN,5.6
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Nyheim Hines,13900,IND,RB,TAXI,4.3
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Paul Richardson,10284,WAS,WR,BN,10.6
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Ricky Seals-Jones,13168,ARI,TE,BN,9.5
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Theo Riddick,9445,DET,RB,RB,3.6
+1073363,663603,SeanMcNally,Trubisky Hype Train CHOO CHOO,2018,3,Will Fuller,12023,HOU,WR,WR,16.1
 1073363,663603,SeanMcNally,freesimmons,2014,1,Antonio Brown,6660,PIT,WR,WR,17.6
 1073363,663603,SeanMcNally,freesimmons,2014,1,Bernard Pierce,8399,BAL,RB,BN,-0.3
 1073363,663603,SeanMcNally,freesimmons,2014,1,Brandin Cooks,10242,NO,WR,BN,15.5
@@ -4031,7 +4098,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073370,922306,dayello,Jim Top Will Bottom,2016,11,Ben Roethlisberger,394,PIT,QB,BN,8.68
 1073370,922306,dayello,Jim Top Will Bottom,2016,11,C.J. Prosise,12059,SEA,RB,RB,14.1
 1073370,922306,dayello,Jim Top Will Bottom,2016,11,Cameron Brate,10991,TB,TE,WR/TE,1.8
-1073370,922306,dayello,Jim Top Will Bottom,2016,11,Christine Michael,9386,IND,RB,BN,0
+1073370,922306,dayello,Jim Top Will Bottom,2016,11,Christine Michael,9386,FA,RB,BN,0
 1073370,922306,dayello,Jim Top Will Bottom,2016,11,Eli Manning,1181,NYG,QB,QB,17.18
 1073370,922306,dayello,Jim Top Will Bottom,2016,11,J.J. Nelson,11254,ARI,WR,BN,0
 1073370,922306,dayello,Jim Top Will Bottom,2016,11,Julian Edelman,6269,NE,WR,WR,14.9
@@ -4190,7 +4257,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073370,922306,dayello,Jim Top Will Bottom,2016,5,Buffalo Bills,2331,BUF,D/ST,D/ST,17
 1073370,922306,dayello,Jim Top Will Bottom,2016,5,C.J. Prosise,12059,SEA,RB,BN,0
 1073370,922306,dayello,Jim Top Will Bottom,2016,5,Cameron Brate,10991,TB,TE,BN,3.8
-1073370,922306,dayello,Jim Top Will Bottom,2016,5,Christine Michael,9386,IND,RB,BN,0
+1073370,922306,dayello,Jim Top Will Bottom,2016,5,Christine Michael,9386,FA,RB,BN,0
 1073370,922306,dayello,Jim Top Will Bottom,2016,5,DeVante Parker,11170,MIA,WR,BN,7
 1073370,922306,dayello,Jim Top Will Bottom,2016,5,Eli Manning,1181,NYG,QB,BN,10.06
 1073370,922306,dayello,Jim Top Will Bottom,2016,5,Jeremy Langford,11271,FA,RB,BN,0
@@ -4588,6 +4655,26 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073370,922306,dayello,Rollin with Mahomies,2018,2,Ryan Grant,10463,IND,WR,BN,3
 1073370,922306,dayello,Rollin with Mahomies,2018,2,Willie Snead,10707,BAL,WR,WR/TE,5.4
 1073370,922306,dayello,Rollin with Mahomies,2018,2,Zay Jones,12937,BUF,WR,BN,6.3
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Cameron Brate,10991,TB,TE,BN,9.4
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Charles Clay,7488,BUF,TE,BN,1.8
+1073370,922306,dayello,Rollin with Mahomies,2018,3,D.J. Moore,13764,CAR,WR,RB/WR/TE,0.3
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Dante Pettis,13816,SF,WR,WR,0
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Ezekiel Elliott,12025,DAL,RB,RB,11.8
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Golden Tate,6642,DET,WR,WR,6.9
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Houston Texans,2340,HOU,D/ST,D/ST,4
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Jake Butt,13016,DEN,TE,BN,0.8
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Jared Cook,6126,OAK,TE,TE,3.1
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Jordan Akins,13844,HOU,TE,TAXI,1.8
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Kalen Ballage,13904,MIA,RB,TAXI,0
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Marcus Mariota,11184,TEN,QB,BN,9.1
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Matt Breida,13358,SF,RB,RB,11.7
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Patrick Mahomes,12894,KC,QB,QB,25.26
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Rishard Matthews,8511,TEN,WR,BN,0.3
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Royce Freeman,13796,DEN,RB,BN,11.8
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Ryan Grant,10463,IND,WR,BN,9.5
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Tyler Boyd,12051,CIN,WR,WR/TE,19.7
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Willie Snead,10707,BAL,WR,BN,3.9
+1073370,922306,dayello,Rollin with Mahomies,2018,3,Zay Jones,12937,BUF,WR,BN,1.7
 1073395,662952,WillPo,Armed Rodgery,2015,1,Aaron Rodgers,3452,GB,QB,QB,23.06
 1073395,662952,WillPo,Armed Rodgery,2015,1,Andre Ellington,9396,ARI,RB,BN,11.6
 1073395,662952,WillPo,Armed Rodgery,2015,1,Brandon Marshall,4286,NYJ,WR,WR,12.2
@@ -5737,10 +5824,33 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,2,Ty Montgomery,11213,GB,RB,BN,4
 1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,2,Tyler Lockett,11242,SEA,WR,BN,12
 1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,2,Vernon Davis,4060,WAS,TE,BN,0.7
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Aaron Jones,13111,GB,RB,BN,4.7
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Aaron Rodgers,3452,GB,QB,QB,19.9
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Baltimore Ravens,2330,BAL,D/ST,D/ST,6
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Chris Carson,13141,SEA,RB,RB,18.4
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Cooper Kupp,12970,LAR,WR,WR/TE,12.8
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,DaeSean Hamilton,13861,DEN,WR,TAXI,0
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Duke Johnson,11201,CLE,RB,RB,3.3
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Ian Thomas,13874,CAR,TE,TAXI,2
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Jake Kumerow,7263,GB,WR,IR,0
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Jared Goff,12102,LAR,QB,BN,25.56
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Jordan Reed,9395,WAS,TE,TE,6.5
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Jordy Nelson,5349,OAK,WR,BN,23.3
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,JuJu Smith-Schuster,12950,PIT,WR,WR,11.6
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Keke Coutee,13903,HOU,WR,TAXI,0
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Los Angeles Chargers,2353,LAC,D/ST,BN,4
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Mark Walton,13857,CIN,RB,TAXI,0
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Mike Evans,10252,TB,WR,WR,19.7
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Pierre Garcon,5381,SF,WR,BN,1.1
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Sony Michel,13750,NE,RB,BN,4.9
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Ted Ginn,4710,NO,WR,BN,9.2
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Ty Montgomery,11213,GB,RB,BN,6.4
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Tyler Lockett,11242,SEA,WR,RB/WR/TE,14.2
+1073395,662952,WillPo,Knock Knock Knockin' on Evan's Door,2018,3,Vernon Davis,4060,WAS,TE,BN,7
 1073420,663644,Truax,Ameericans,2015,1,Alfred Blue,10346,HOU,RB,BN,4.9
 1073420,663644,Truax,Ameericans,2015,1,Ameer Abdullah,11207,DET,RB,BN,15.4
 1073420,663644,Truax,Ameericans,2015,1,Brandon Coleman,10874,NO,WR,BN,10.1
-1073420,663644,Truax,Ameericans,2015,1,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,1,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,1,Darren Waller,11261,BAL,TE,BN,0
 1073420,663644,Truax,Ameericans,2015,1,Denver Broncos,2337,DEN,D/ST,D/ST,16
 1073420,663644,Truax,Ameericans,2015,1,Doug Baldwin,7869,SEA,WR,BN,3.5
@@ -5756,7 +5866,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,1,Torrey Smith,7447,SF,WR,WR,1.1
 1073420,663644,Truax,Ameericans,2015,10,Ameer Abdullah,11207,DET,RB,BN,2.2
 1073420,663644,Truax,Ameericans,2015,10,Brandon Coleman,10874,NO,WR,WR,1.4
-1073420,663644,Truax,Ameericans,2015,10,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,10,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,10,Brian Hoyer,6324,HOU,QB,QB,4.42
 1073420,663644,Truax,Ameericans,2015,10,Charcandrick West,10894,KC,RB,RB,28.1
 1073420,663644,Truax,Ameericans,2015,10,Denver Broncos,2337,DEN,D/ST,D/ST,2
@@ -5774,7 +5884,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,10,Nate Washington,3630,HOU,WR,WR/TE,3.2
 1073420,663644,Truax,Ameericans,2015,11,Ameer Abdullah,11207,DET,RB,BN,4.6
 1073420,663644,Truax,Ameericans,2015,11,Brandon Coleman,10874,FA,WR,BN,0
-1073420,663644,Truax,Ameericans,2015,11,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,11,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,11,Brian Hoyer,6324,NE,QB,BN,0
 1073420,663644,Truax,Ameericans,2015,11,Charcandrick West,10894,KC,RB,RB,6.4
 1073420,663644,Truax,Ameericans,2015,11,Denver Broncos,2337,DEN,D/ST,D/ST,7
@@ -5792,7 +5902,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,11,Nate Washington,3630,HOU,WR,WR/TE,1.3
 1073420,663644,Truax,Ameericans,2015,12,Ameer Abdullah,11207,DET,RB,BN,7.5
 1073420,663644,Truax,Ameericans,2015,12,Brandon Coleman,10874,NO,WR,BN,0
-1073420,663644,Truax,Ameericans,2015,12,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,12,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,12,Brian Hoyer,6324,HOU,QB,BN,13.9
 1073420,663644,Truax,Ameericans,2015,12,Charcandrick West,10894,FA,RB,BN,0
 1073420,663644,Truax,Ameericans,2015,12,Denver Broncos,2337,DEN,D/ST,D/ST,5
@@ -5810,7 +5920,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,12,Nate Washington,3630,HOU,WR,WR/TE,4.3
 1073420,663644,Truax,Ameericans,2015,13,Ameer Abdullah,11207,DET,RB,BN,6.7
 1073420,663644,Truax,Ameericans,2015,13,Brandon Coleman,10874,NO,WR,BN,13.3
-1073420,663644,Truax,Ameericans,2015,13,Breshad Perriman,11156,WAS,WR,IR,0
+1073420,663644,Truax,Ameericans,2015,13,Breshad Perriman,11156,FA,WR,IR,0
 1073420,663644,Truax,Ameericans,2015,13,Brian Hoyer,6324,HOU,QB,BN,23.22
 1073420,663644,Truax,Ameericans,2015,13,Charcandrick West,10894,KC,RB,RB,4.4
 1073420,663644,Truax,Ameericans,2015,13,Denver Broncos,2337,DEN,D/ST,D/ST,23
@@ -5827,7 +5937,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,13,Nate Washington,3630,HOU,WR,WR/TE,4.4
 1073420,663644,Truax,Ameericans,2015,14,Ameer Abdullah,11207,DET,RB,BN,4.4
 1073420,663644,Truax,Ameericans,2015,14,Brandon Coleman,10874,NO,WR,BN,3.2
-1073420,663644,Truax,Ameericans,2015,14,Breshad Perriman,11156,WAS,WR,IR,0
+1073420,663644,Truax,Ameericans,2015,14,Breshad Perriman,11156,FA,WR,IR,0
 1073420,663644,Truax,Ameericans,2015,14,Brian Hoyer,6324,HOU,QB,BN,4.1
 1073420,663644,Truax,Ameericans,2015,14,Charcandrick West,10894,KC,RB,RB,5.4
 1073420,663644,Truax,Ameericans,2015,14,Denver Broncos,2337,DEN,D/ST,D/ST,4
@@ -5844,7 +5954,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,14,Nate Washington,3630,HOU,WR,WR/TE,4.9
 1073420,663644,Truax,Ameericans,2015,15,Ameer Abdullah,11207,DET,RB,BN,12.9
 1073420,663644,Truax,Ameericans,2015,15,Brandon Coleman,10874,NO,WR,BN,0
-1073420,663644,Truax,Ameericans,2015,15,Breshad Perriman,11156,WAS,WR,IR,0
+1073420,663644,Truax,Ameericans,2015,15,Breshad Perriman,11156,FA,WR,IR,0
 1073420,663644,Truax,Ameericans,2015,15,Brian Hoyer,6324,NE,QB,BN,0
 1073420,663644,Truax,Ameericans,2015,15,Charcandrick West,10894,KC,RB,RB,14.5
 1073420,663644,Truax,Ameericans,2015,15,Denver Broncos,2337,DEN,D/ST,D/ST,6
@@ -5861,7 +5971,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,15,Nate Washington,3630,HOU,WR,WR/TE,1.8
 1073420,663644,Truax,Ameericans,2015,16,Ameer Abdullah,11207,DET,RB,BN,4.8
 1073420,663644,Truax,Ameericans,2015,16,Brandon Coleman,10874,NO,WR,BN,4.5
-1073420,663644,Truax,Ameericans,2015,16,Breshad Perriman,11156,WAS,WR,IR,0
+1073420,663644,Truax,Ameericans,2015,16,Breshad Perriman,11156,FA,WR,IR,0
 1073420,663644,Truax,Ameericans,2015,16,Brian Hoyer,6324,NE,QB,BN,0
 1073420,663644,Truax,Ameericans,2015,16,Charcandrick West,10894,KC,RB,RB,6.1
 1073420,663644,Truax,Ameericans,2015,16,Denver Broncos,2337,DEN,D/ST,D/ST,5
@@ -5879,7 +5989,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,2,Alfred Blue,10346,HOU,RB,BN,1
 1073420,663644,Truax,Ameericans,2015,2,Ameer Abdullah,11207,DET,RB,RB,1.8
 1073420,663644,Truax,Ameericans,2015,2,Brandon Coleman,10874,NO,WR,WR,3.3
-1073420,663644,Truax,Ameericans,2015,2,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,2,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,2,Darren Waller,11261,BAL,TE,BN,0
 1073420,663644,Truax,Ameericans,2015,2,Denver Broncos,2337,DEN,D/ST,D/ST,21
 1073420,663644,Truax,Ameericans,2015,2,Doug Baldwin,7869,SEA,WR,BN,15.2
@@ -5896,7 +6006,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,3,Alfred Blue,10346,HOU,RB,BN,19.9
 1073420,663644,Truax,Ameericans,2015,3,Ameer Abdullah,11207,DET,RB,BN,10.2
 1073420,663644,Truax,Ameericans,2015,3,Brandon Coleman,10874,NO,WR,BN,0.9
-1073420,663644,Truax,Ameericans,2015,3,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,3,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,3,Darren Waller,11261,BAL,TE,BN,0
 1073420,663644,Truax,Ameericans,2015,3,Denver Broncos,2337,DEN,D/ST,D/ST,14
 1073420,663644,Truax,Ameericans,2015,3,Doug Baldwin,7869,SEA,WR,BN,3.5
@@ -5913,7 +6023,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,4,Alfred Blue,10346,HOU,RB,RB,1.7
 1073420,663644,Truax,Ameericans,2015,4,Ameer Abdullah,11207,DET,RB,BN,4.4
 1073420,663644,Truax,Ameericans,2015,4,Brandon Coleman,10874,NO,WR,BN,3
-1073420,663644,Truax,Ameericans,2015,4,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,4,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,4,Darren Waller,11261,BAL,TE,BN,1.7
 1073420,663644,Truax,Ameericans,2015,4,Denver Broncos,2337,DEN,D/ST,D/ST,10
 1073420,663644,Truax,Ameericans,2015,4,Doug Baldwin,7869,SEA,WR,BN,9.6
@@ -5930,7 +6040,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,5,Alfred Blue,10346,HOU,RB,BN,3.3
 1073420,663644,Truax,Ameericans,2015,5,Ameer Abdullah,11207,DET,RB,RB,0.5
 1073420,663644,Truax,Ameericans,2015,5,Brandon Coleman,10874,NO,WR,BN,0
-1073420,663644,Truax,Ameericans,2015,5,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,5,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,5,Darren Waller,11261,BAL,TE,BN,0.1
 1073420,663644,Truax,Ameericans,2015,5,Denver Broncos,2337,DEN,D/ST,D/ST,20
 1073420,663644,Truax,Ameericans,2015,5,Doug Baldwin,7869,SEA,WR,WR,7
@@ -5947,7 +6057,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,6,Alfred Blue,10346,HOU,RB,BN,0
 1073420,663644,Truax,Ameericans,2015,6,Ameer Abdullah,11207,DET,RB,BN,6.9
 1073420,663644,Truax,Ameericans,2015,6,Brandon Coleman,10874,NO,WR,BN,0
-1073420,663644,Truax,Ameericans,2015,6,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,6,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,6,Charcandrick West,10894,KC,RB,RB,1.9
 1073420,663644,Truax,Ameericans,2015,6,Darren Waller,11261,BAL,TE,BN,0
 1073420,663644,Truax,Ameericans,2015,6,Denver Broncos,2337,DEN,D/ST,D/ST,16
@@ -5963,7 +6073,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,6,Torrey Smith,7447,SF,WR,BN,15.6
 1073420,663644,Truax,Ameericans,2015,7,Ameer Abdullah,11207,DET,RB,BN,4.3
 1073420,663644,Truax,Ameericans,2015,7,Brandon Coleman,10874,NO,WR,BN,2.4
-1073420,663644,Truax,Ameericans,2015,7,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,7,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,7,Charcandrick West,10894,KC,RB,BN,18.9
 1073420,663644,Truax,Ameericans,2015,7,Denver Broncos,2337,DEN,D/ST,BN,0
 1073420,663644,Truax,Ameericans,2015,7,Doug Baldwin,7869,SEA,WR,WR,1.9
@@ -5980,7 +6090,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,7,Torrey Smith,7447,SF,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,8,Ameer Abdullah,11207,DET,RB,BN,0.3
 1073420,663644,Truax,Ameericans,2015,8,Brandon Coleman,10874,NO,WR,BN,1.4
-1073420,663644,Truax,Ameericans,2015,8,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,8,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,8,Charcandrick West,10894,KC,RB,RB,18.2
 1073420,663644,Truax,Ameericans,2015,8,Denver Broncos,2337,DEN,D/ST,D/ST,9
 1073420,663644,Truax,Ameericans,2015,8,Doug Baldwin,7869,SEA,WR,WR,3.5
@@ -5997,7 +6107,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2015,8,Torrey Smith,7447,SF,WR,BN,1.9
 1073420,663644,Truax,Ameericans,2015,9,Ameer Abdullah,11207,DET,RB,BN,0
 1073420,663644,Truax,Ameericans,2015,9,Brandon Coleman,10874,NO,WR,WR,5.8
-1073420,663644,Truax,Ameericans,2015,9,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2015,9,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2015,9,Brian Hoyer,6324,NE,QB,BN,0
 1073420,663644,Truax,Ameericans,2015,9,Charcandrick West,10894,FA,RB,BN,0
 1073420,663644,Truax,Ameericans,2015,9,Denver Broncos,2337,DEN,D/ST,D/ST,1
@@ -6257,7 +6367,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Ameericans,2016,7,Tyrell Williams,11504,LAC,WR,WR/TE,14
 1073420,663644,Truax,Ameericans,2016,7,Victor Cruz,6881,NYG,WR,BN,5.5
 1073420,663644,Truax,Ameericans,2016,8,Ameer Abdullah,11207,DET,RB,IR,0
-1073420,663644,Truax,Ameericans,2016,8,Breshad Perriman,11156,WAS,WR,BN,0
+1073420,663644,Truax,Ameericans,2016,8,Breshad Perriman,11156,FA,WR,BN,0
 1073420,663644,Truax,Ameericans,2016,8,Charcandrick West,10894,KC,RB,BN,6
 1073420,663644,Truax,Ameericans,2016,8,DeAndre Washington,12134,OAK,RB,BN,3.2
 1073420,663644,Truax,Ameericans,2016,8,Denver Broncos,2337,DEN,D/ST,D/ST,17
@@ -6607,6 +6717,27 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073420,663644,Truax,Growin and Showin,2018,2,Tom Brady,309,NE,QB,QB,16.36
 1073420,663644,Truax,Growin and Showin,2018,2,Trent Taylor,13095,SF,WR,BN,0
 1073420,663644,Truax,Growin and Showin,2018,2,Tyrell Williams,11504,LAC,WR,BN,4.8
+1073420,663644,Truax,Growin and Showin,2018,3,Allen Hurns,10839,DAL,WR,BN,2.2
+1073420,663644,Truax,Growin and Showin,2018,3,Brandon Marshall,4286,SEA,WR,BN,3
+1073420,663644,Truax,Growin and Showin,2018,3,Detroit Lions,2338,DET,D/ST,D/ST,8
+1073420,663644,Truax,Growin and Showin,2018,3,Emmanuel Sanders,6636,DEN,WR,WR,13.3
+1073420,663644,Truax,Growin and Showin,2018,3,Frank Gore,2848,MIA,RB,BN,1.2
+1073420,663644,Truax,Growin and Showin,2018,3,Jack Doyle,9990,IND,TE,BN,0
+1073420,663644,Truax,Growin and Showin,2018,3,Javorius Allen,11256,BAL,RB,BN,14.6
+1073420,663644,Truax,Growin and Showin,2018,3,Josh Rosen,13760,ARI,QB,TAXI,0.64
+1073420,663644,Truax,Growin and Showin,2018,3,Julio Jones,7372,ATL,WR,WR,9.6
+1073420,663644,Truax,Growin and Showin,2018,3,Justin Jackson,14018,LAC,RB,TAXI,0
+1073420,663644,Truax,Growin and Showin,2018,3,Keenan Allen,9380,LAC,WR,WR/TE,2.4
+1073420,663644,Truax,Growin and Showin,2018,3,Kenyan Drake,12101,MIA,RB,RB,1
+1073420,663644,Truax,Growin and Showin,2018,3,Matt Ryan,5371,ATL,QB,BN,40.16
+1073420,663644,Truax,Growin and Showin,2018,3,Melvin Gordon,11180,LAC,RB,RB,14.4
+1073420,663644,Truax,Growin and Showin,2018,3,Michael Gallup,13788,DAL,WR,TAXI,1.7
+1073420,663644,Truax,Growin and Showin,2018,3,O.J. Howard,12891,TB,TE,TE,7.2
+1073420,663644,Truax,Growin and Showin,2018,3,Quincy Enunwa,10427,NYJ,WR,RB/WR/TE,5.7
+1073420,663644,Truax,Growin and Showin,2018,3,Rob Kelley,12800,WAS,RB,BN,0
+1073420,663644,Truax,Growin and Showin,2018,3,Tom Brady,309,NE,QB,QB,7.52
+1073420,663644,Truax,Growin and Showin,2018,3,Trent Taylor,13095,SF,WR,BN,2.4
+1073420,663644,Truax,Growin and Showin,2018,3,Tyrell Williams,11504,LAC,WR,BN,3.6
 1073420,663644,Truax,Raging Rozies,2014,1,Anquan Boldin,270,SF,WR,BN,9.9
 1073420,663644,Truax,Raging Rozies,2014,1,Brandon Marshall,4286,CHI,WR,WR,11.1
 1073420,663644,Truax,Raging Rozies,2014,1,Carlos Hyde,10335,SF,RB,BN,11
@@ -7993,6 +8124,30 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1073671,663759,JoeDeGregorio,Joe for Broke,2018,2,T.Y. Hilton,8493,IND,WR,WR,14.3
 1073671,663759,JoeDeGregorio,Joe for Broke,2018,2,Todd Gurley,11182,LAR,RB,RB,29.3
 1073671,663759,JoeDeGregorio,Joe for Broke,2018,2,Wayne Gallman,13021,NYG,RB,BN,1.3
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Austin Seferian-Jenkins,10275,JAC,TE,TE,1.8
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Cam Sims,14411,WAS,WR,IR,0
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Chris Warren,14503,OAK,RB,IR,0
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Corey Davis,12913,TEN,WR,BN,3.4
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Derek Carr,10315,OAK,QB,BN,13.6
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Drew Brees,325,NO,QB,QB,40.54
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Jarvis Landry,10307,CLE,WR,WR/TE,12.3
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Jaylen Samuels,13935,PIT,RB,TAXI,0
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Jonnu Smith,12974,TEN,TE,BN,0.9
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Jordan Wilkins,13969,IND,RB,TAXI,2
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Kerryon Johnson,13828,DET,RB,TAXI,11
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,LeSean McCoy,6090,BUF,RB,BN,0
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Marcus Murphy,11344,BUF,RB,BN,3.4
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Marlon Mack,13044,IND,RB,BN,0
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Michael Crabtree,6047,BAL,WR,BN,6.1
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,New England Patriots,2346,NE,D/ST,D/ST,3
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,New York Jets,2349,NYJ,D/ST,BN,4
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Phillip Lindsay,14063,DEN,RB,RB,2
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Sam Darnold,13770,NYJ,QB,TAXI,2.76
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Sammy Watkins,10256,KC,WR,RB/WR/TE,13.5
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Stefon Diggs,11329,MIN,WR,WR,1.7
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,T.Y. Hilton,8493,IND,WR,WR,5
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Todd Gurley,11182,LAR,RB,RB,19.6
+1073671,663759,JoeDeGregorio,Joe for Broke,2018,3,Wayne Gallman,13021,NYG,RB,BN,2.5
 1075098,664473,THaze,Catch it Like Beckham,2014,1,Baltimore Ravens,2330,BAL,D/ST,D/ST,0
 1075098,664473,THaze,Catch it Like Beckham,2014,1,Darren Sproles,3501,PHI,RB,BN,14.5
 1075098,664473,THaze,Catch it Like Beckham,2014,1,DeMarco Murray,7435,DAL,RB,RB,18.3
@@ -8279,8 +8434,29 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1075098,664473,THaze,Jimmy Gs Halfway House,2018,2,Nelson Agholor,11178,PHI,WR,WR/TE,15
 1075098,664473,THaze,Jimmy Gs Halfway House,2018,2,Spencer Ware,9534,KC,RB,BN,0.3
 1075098,664473,THaze,Jimmy Gs Halfway House,2018,2,Tyreek Hill,12197,KC,WR,WR,15
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Adam Shaheen,12933,CHI,TE,IR,0
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Adrian Peterson,4893,WAS,RB,RB/WR/TE,24
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Antonio Callaway,13869,CLE,WR,WR,2
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Austin Hooper,12069,ATL,TE,BN,4.3
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Bo Scarbrough,13981,DAL,RB,TAXI,0
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Chicago Bears,2333,CHI,D/ST,D/ST,13
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Derrick Henry,12042,TEN,RB,BN,5.7
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Evan Engram,12906,NYG,TE,TE,1.9
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Giovani Bernard,9341,CIN,RB,RB,14.6
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Hayden Hurst,13774,BAL,TE,TAXI,0
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Jameis Winston,11183,TB,QB,BN,0
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,James White,10475,NE,RB,BN,11.1
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Jimmy Garoppolo,10311,SF,QB,QB,22.34
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Joe Mixon,12975,CIN,RB,BN,0
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,John Ross,12915,CIN,WR,BN,1.6
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Josh Gordon,9235,NE,WR,BN,0
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Kareem Hunt,12934,KC,RB,RB,16.4
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Marquise Goodwin,9337,SF,WR,BN,8.8
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Nelson Agholor,11178,PHI,WR,WR/TE,2.4
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Tennessee Titans,2358,TEN,D/ST,BN,12
+1075098,664473,THaze,Jimmy Gs Halfway House,2018,3,Tyreek Hill,12197,KC,WR,WR,5.6
 1075098,664473,THaze,trading up for reggie wayne,2015,1,Adrian Peterson,4893,MIN,RB,RB,5.2
-1075098,664473,THaze,trading up for reggie wayne,2015,1,Christine Michael,9386,IND,RB,BN,0
+1075098,664473,THaze,trading up for reggie wayne,2015,1,Christine Michael,9386,FA,RB,BN,0
 1075098,664473,THaze,trading up for reggie wayne,2015,1,Cody Parkey,10813,PHI,K,K,6
 1075098,664473,THaze,trading up for reggie wayne,2015,1,Darren McFadden,5358,DAL,RB,BN,3.5
 1075098,664473,THaze,trading up for reggie wayne,2015,1,DeMarco Murray,7435,PHI,RB,RB,14
@@ -8430,7 +8606,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1075098,664473,THaze,trading up for reggie wayne,2015,16,Odell Beckham,10243,NYG,WR,BN,0
 1075098,664473,THaze,trading up for reggie wayne,2015,16,Pierre Garcon,5381,WAS,WR,BN,14
 1075098,664473,THaze,trading up for reggie wayne,2015,2,Adrian Peterson,4893,MIN,RB,RB,17.2
-1075098,664473,THaze,trading up for reggie wayne,2015,2,Christine Michael,9386,IND,RB,BN,0
+1075098,664473,THaze,trading up for reggie wayne,2015,2,Christine Michael,9386,FA,RB,BN,0
 1075098,664473,THaze,trading up for reggie wayne,2015,2,Cody Parkey,10813,PHI,K,K,5
 1075098,664473,THaze,trading up for reggie wayne,2015,2,Darren McFadden,5358,DAL,RB,BN,5.2
 1075098,664473,THaze,trading up for reggie wayne,2015,2,DeMarco Murray,7435,PHI,RB,RB,5.5
@@ -8447,7 +8623,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1075098,664473,THaze,trading up for reggie wayne,2015,2,Philip Rivers,326,LAC,QB,QB,14.14
 1075098,664473,THaze,trading up for reggie wayne,2015,2,Pierre Garcon,5381,WAS,WR,WR,8.3
 1075098,664473,THaze,trading up for reggie wayne,2015,3,Adrian Peterson,4893,MIN,RB,RB,24.6
-1075098,664473,THaze,trading up for reggie wayne,2015,3,Christine Michael,9386,IND,RB,BN,0
+1075098,664473,THaze,trading up for reggie wayne,2015,3,Christine Michael,9386,FA,RB,BN,0
 1075098,664473,THaze,trading up for reggie wayne,2015,3,Cody Parkey,10813,PHI,K,K,6
 1075098,664473,THaze,trading up for reggie wayne,2015,3,Darren McFadden,5358,DAL,RB,BN,9.5
 1075098,664473,THaze,trading up for reggie wayne,2015,3,DeMarco Murray,7435,FA,RB,BN,0
@@ -8500,7 +8676,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1075098,664473,THaze,trading up for reggie wayne,2015,5,Peyton Manning,1178,DEN,QB,QB,6.64
 1075098,664473,THaze,trading up for reggie wayne,2015,5,Pierre Garcon,5381,WAS,WR,WR,5.1
 1075098,664473,THaze,trading up for reggie wayne,2015,6,Adrian Peterson,4893,MIN,RB,RB,5.7
-1075098,664473,THaze,trading up for reggie wayne,2015,6,Christine Michael,9386,IND,RB,BN,0
+1075098,664473,THaze,trading up for reggie wayne,2015,6,Christine Michael,9386,FA,RB,BN,0
 1075098,664473,THaze,trading up for reggie wayne,2015,6,Cincinnati Bengals,2334,CIN,D/ST,D/ST,4
 1075098,664473,THaze,trading up for reggie wayne,2015,6,Cody Parkey,10813,CHI,K,IR,0
 1075098,664473,THaze,trading up for reggie wayne,2015,6,DeMarco Murray,7435,PHI,RB,BN,18.6
@@ -8557,7 +8733,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1075098,664473,THaze,trading up for reggie wayne,2015,9,Adrian Peterson,4893,MIN,RB,RB,20.3
 1075098,664473,THaze,trading up for reggie wayne,2015,9,Alfred Blue,10346,HOU,RB,BN,0
 1075098,664473,THaze,trading up for reggie wayne,2015,9,Blake Bortles,10236,JAC,QB,BN,20.44
-1075098,664473,THaze,trading up for reggie wayne,2015,9,Christine Michael,9386,IND,RB,BN,0
+1075098,664473,THaze,trading up for reggie wayne,2015,9,Christine Michael,9386,FA,RB,BN,0
 1075098,664473,THaze,trading up for reggie wayne,2015,9,Cody Parkey,10813,CHI,K,IR,0
 1075098,664473,THaze,trading up for reggie wayne,2015,9,DeMarco Murray,7435,PHI,RB,BN,22.1
 1075098,664473,THaze,trading up for reggie wayne,2015,9,Dion Lewis,7535,NE,RB,RB,5.3
@@ -9478,6 +9654,27 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1087309,671042,jimayello,Everything ...  All of it,2018,2,Phillip Dorsett,11167,NE,WR,BN,4.4
 1087309,671042,jimayello,Everything ...  All of it,2018,2,Tyrod Taylor,7592,CLE,QB,QB,14.44
 1087309,671042,jimayello,Everything ...  All of it,2018,2,Zach Ertz,9376,PHI,TE,TE,9.4
+1087309,671042,jimayello,Everything ...  All of it,2018,3,A.J. Green,7369,CIN,WR,WR,5.8
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Dak Prescott,12159,DAL,QB,BN,8.82
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Dallas Goedert,13813,PHI,TE,TAXI,13.3
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Dalvin Cook,12929,MIN,RB,BN,0
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Davante Adams,10295,GB,WR,WR/TE,11.2
+1087309,671042,jimayello,Everything ...  All of it,2018,3,DeVante Parker,11170,MIA,WR,BN,4
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Ito Smith,13898,ATL,RB,TAXI,3.5
+1087309,671042,jimayello,Everything ...  All of it,2018,3,James Conner,12951,PIT,RB,RB/WR/TE,9.5
+1087309,671042,jimayello,Everything ...  All of it,2018,3,John Kelly,13927,LAR,RB,TAXI,0
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Jordan Howard,12114,CHI,RB,RB,14.1
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Keelan Cole,13261,JAC,WR,BN,4
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Kenny Stills,9492,MIA,WR,BN,12.1
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Kirk Cousins,8625,MIN,QB,QB,10.04
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Lamar Miller,8512,HOU,RB,BN,9.1
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Latavius Murray,9504,MIN,RB,RB,3.1
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Michael Thomas,12096,NO,WR,WR,12.9
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Minnesota Vikings,2345,MIN,D/ST,D/ST,3
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Philadelphia Eagles,2351,PHI,D/ST,BN,3
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Phillip Dorsett,11167,NE,WR,BN,0
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Tyrod Taylor,7592,CLE,QB,BN,2.96
+1087309,671042,jimayello,Everything ...  All of it,2018,3,Zach Ertz,9376,PHI,TE,TE,7.3
 1087309,671042,jimayello,Everything hurts,2016,1,A.J. Green,7369,CIN,WR,WR,24
 1087309,671042,jimayello,Everything hurts,2016,1,Antonio Brown,6660,PIT,WR,WR,24.6
 1087309,671042,jimayello,Everything hurts,2016,1,Carson Palmer,743,ARI,QB,QB,18.94
@@ -9765,7 +9962,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1087309,671042,jimayello,Mom's Still Got It!,2014,1,Alfred Morris,8630,WAS,RB,RB,9.1
 1087309,671042,jimayello,Mom's Still Got It!,2014,1,Antonio Gates,64,LAC,TE,TE,8.1
 1087309,671042,jimayello,Mom's Still Got It!,2014,1,Ben Roethlisberger,394,PIT,QB,BN,17.4
-1087309,671042,jimayello,Mom's Still Got It!,2014,1,Christine Michael,9386,IND,RB,BN,0
+1087309,671042,jimayello,Mom's Still Got It!,2014,1,Christine Michael,9386,FA,RB,BN,0
 1087309,671042,jimayello,Mom's Still Got It!,2014,1,Eddie Lacy,9352,GB,RB,RB,4.5
 1087309,671042,jimayello,Mom's Still Got It!,2014,1,Greg Zuerlein,8608,LAR,K,K,9
 1087309,671042,jimayello,Mom's Still Got It!,2014,1,Houston Texans,2340,HOU,D/ST,D/ST,20
@@ -9892,7 +10089,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1087309,671042,jimayello,Mom's Still Got It!,2014,16,Stevan Ridley,7443,PIT,RB,IR,0
 1087309,671042,jimayello,Mom's Still Got It!,2014,2,Alfred Morris,8630,WAS,RB,RB,20.5
 1087309,671042,jimayello,Mom's Still Got It!,2014,2,Antonio Gates,64,LAC,TE,TE,27.6
-1087309,671042,jimayello,Mom's Still Got It!,2014,2,Christine Michael,9386,IND,RB,BN,0
+1087309,671042,jimayello,Mom's Still Got It!,2014,2,Christine Michael,9386,FA,RB,BN,0
 1087309,671042,jimayello,Mom's Still Got It!,2014,2,Eddie Lacy,9352,GB,RB,RB,6.1
 1087309,671042,jimayello,Mom's Still Got It!,2014,2,Houston Texans,2340,HOU,D/ST,D/ST,9
 1087309,671042,jimayello,Mom's Still Got It!,2014,2,Jake Locker,7376,TEN,QB,QB,10.26
@@ -9907,7 +10104,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1087309,671042,jimayello,Mom's Still Got It!,2014,2,Toby Gerhart,6608,JAC,RB,BN,1.7
 1087309,671042,jimayello,Mom's Still Got It!,2014,3,Alfred Morris,8630,WAS,RB,RB,7.7
 1087309,671042,jimayello,Mom's Still Got It!,2014,3,Antonio Gates,64,LAC,TE,TE,0.8
-1087309,671042,jimayello,Mom's Still Got It!,2014,3,Christine Michael,9386,IND,RB,BN,0
+1087309,671042,jimayello,Mom's Still Got It!,2014,3,Christine Michael,9386,FA,RB,BN,0
 1087309,671042,jimayello,Mom's Still Got It!,2014,3,Eddie Lacy,9352,GB,RB,RB,2.5
 1087309,671042,jimayello,Mom's Still Got It!,2014,3,Houston Texans,2340,HOU,D/ST,D/ST,2
 1087309,671042,jimayello,Mom's Still Got It!,2014,3,Jake Locker,7376,TEN,QB,BN,8.4
@@ -9922,7 +10119,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1087309,671042,jimayello,Mom's Still Got It!,2014,3,Toby Gerhart,6608,JAC,RB,BN,6.3
 1087309,671042,jimayello,Mom's Still Got It!,2014,4,Alfred Morris,8630,WAS,RB,RB,15
 1087309,671042,jimayello,Mom's Still Got It!,2014,4,Antonio Gates,64,LAC,TE,TE,3
-1087309,671042,jimayello,Mom's Still Got It!,2014,4,Christine Michael,9386,IND,RB,BN,0
+1087309,671042,jimayello,Mom's Still Got It!,2014,4,Christine Michael,9386,FA,RB,BN,0
 1087309,671042,jimayello,Mom's Still Got It!,2014,4,Eddie Lacy,9352,GB,RB,RB,11.9
 1087309,671042,jimayello,Mom's Still Got It!,2014,4,Houston Texans,2340,HOU,D/ST,D/ST,13
 1087309,671042,jimayello,Mom's Still Got It!,2014,4,Jay Cutler,4077,CHI,QB,QB,17.14
@@ -9937,7 +10134,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1087309,671042,jimayello,Mom's Still Got It!,2014,4,Toby Gerhart,6608,JAC,RB,BN,8
 1087309,671042,jimayello,Mom's Still Got It!,2014,5,Alfred Morris,8630,WAS,RB,BN,2.7
 1087309,671042,jimayello,Mom's Still Got It!,2014,5,Antonio Gates,64,LAC,TE,TE,18
-1087309,671042,jimayello,Mom's Still Got It!,2014,5,Christine Michael,9386,IND,RB,BN,0
+1087309,671042,jimayello,Mom's Still Got It!,2014,5,Christine Michael,9386,FA,RB,BN,0
 1087309,671042,jimayello,Mom's Still Got It!,2014,5,Eddie Lacy,9352,GB,RB,RB,25.2
 1087309,671042,jimayello,Mom's Still Got It!,2014,5,Eddie Royal,5370,LAC,WR,WR/TE,4
 1087309,671042,jimayello,Mom's Still Got It!,2014,5,Greg Zuerlein,8608,LAR,K,K,4
@@ -9951,7 +10148,7 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1087309,671042,jimayello,Mom's Still Got It!,2014,5,Pierre Garcon,5381,WAS,WR,BN,2.3
 1087309,671042,jimayello,Mom's Still Got It!,2014,5,Stevan Ridley,7443,NE,RB,BN,17.3
 1087309,671042,jimayello,Mom's Still Got It!,2014,5,Washington Redskins,2359,WAS,D/ST,BN,3
-1087309,671042,jimayello,Mom's Still Got It!,2014,6,Christine Michael,9386,IND,RB,BN,0
+1087309,671042,jimayello,Mom's Still Got It!,2014,6,Christine Michael,9386,FA,RB,BN,0
 1087309,671042,jimayello,Mom's Still Got It!,2014,6,Eddie Lacy,9352,GB,RB,RB,4
 1087309,671042,jimayello,Mom's Still Got It!,2014,6,Jay Cutler,4077,CHI,QB,QB,21.64
 1087309,671042,jimayello,Mom's Still Got It!,2014,6,Jimmy Graham,6610,GB,TE,BN,0
@@ -10341,6 +10538,29 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1089754,672517,AMackel,Jim's Bitch,2018,2,Philip Rivers,326,LAC,QB,BN,22.74
 1089754,672517,AMackel,Jim's Bitch,2018,2,T.J. Yeldon,11216,JAC,RB,BN,7.1
 1089754,672517,AMackel,Jim's Bitch,2018,2,Tre'Quan Smith,13819,NO,WR,TAXI,1.8
+1089754,672517,AMackel,Jim's Bitch,2018,3,Blake Bortles,10236,JAC,QB,BN,8.9
+1089754,672517,AMackel,Jim's Bitch,2018,3,Chase Edmonds,13870,ARI,RB,TAXI,1
+1089754,672517,AMackel,Jim's Bitch,2018,3,Chris Hogan,8246,NE,WR,WR/TE,3.1
+1089754,672517,AMackel,Jim's Bitch,2018,3,Christian McCaffrey,12892,CAR,RB,RB,19.4
+1089754,672517,AMackel,Jim's Bitch,2018,3,Corey Clement,13165,PHI,RB,RB,7.5
+1089754,672517,AMackel,Jim's Bitch,2018,3,Courtland Sutton,13795,DEN,WR,TAXI,3.7
+1089754,672517,AMackel,Jim's Bitch,2018,3,Curtis Samuel,12930,CAR,WR,BN,0
+1089754,672517,AMackel,Jim's Bitch,2018,3,DeAndre Hopkins,9311,HOU,WR,WR,8.6
+1089754,672517,AMackel,Jim's Bitch,2018,3,Dion Lewis,7535,TEN,RB,RB/WR/TE,4
+1089754,672517,AMackel,Jim's Bitch,2018,3,Doug Baldwin,7869,SEA,WR,BN,0
+1089754,672517,AMackel,Jim's Bitch,2018,3,George Kittle,13023,SF,TE,TE,9.9
+1089754,672517,AMackel,Jim's Bitch,2018,3,Greg Olsen,4828,CAR,TE,BN,0
+1089754,672517,AMackel,Jim's Bitch,2018,3,Jacksonville Jaguars,2342,JAC,D/ST,D/ST,7
+1089754,672517,AMackel,Jim's Bitch,2018,3,Jay Ajayi,11323,PHI,RB,BN,0
+1089754,672517,AMackel,Jim's Bitch,2018,3,Laquon Treadwell,12017,MIN,WR,BN,3.3
+1089754,672517,AMackel,Jim's Bitch,2018,3,Marqise Lee,10303,JAC,WR,IR,0
+1089754,672517,AMackel,Jim's Bitch,2018,3,Marquez Valdes-Scantling,13952,GB,WR,TAXI,0
+1089754,672517,AMackel,Jim's Bitch,2018,3,Matthew Stafford,6038,DET,QB,QB,17.48
+1089754,672517,AMackel,Jim's Bitch,2018,3,Odell Beckham,10243,NYG,WR,WR,10.9
+1089754,672517,AMackel,Jim's Bitch,2018,3,Peyton Barber,12499,TB,RB,BN,3.3
+1089754,672517,AMackel,Jim's Bitch,2018,3,Philip Rivers,326,LAC,QB,BN,17.04
+1089754,672517,AMackel,Jim's Bitch,2018,3,T.J. Yeldon,11216,JAC,RB,BN,9
+1089754,672517,AMackel,Jim's Bitch,2018,3,Tre'Quan Smith,13819,NO,WR,TAXI,0
 1089754,672517,AMackel,The Sheriff's Back,2015,1,Alshon Jeffery,8422,CHI,WR,WR,7.8
 1089754,672517,AMackel,The Sheriff's Back,2015,1,Carlos Hyde,10335,SF,RB,RB,30.2
 1089754,672517,AMackel,The Sheriff's Back,2015,1,Danny Woodhead,5828,LAC,RB,BN,18.2
@@ -12341,6 +12561,29 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1107405,682472,conorclarke,Cleveland Browns SB420,2018,2,Rob Gronkowski,6611,NE,TE,TE,1.5
 1107405,682472,conorclarke,Cleveland Browns SB420,2018,2,Robert Woods,9338,LAR,WR,WR/TE,8.1
 1107405,682472,conorclarke,Cleveland Browns SB420,2018,2,Russell Wilson,8598,SEA,QB,BN,14.74
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Adam Thielen,9891,MIN,WR,WR,10.5
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Alshon Jeffery,8422,PHI,WR,BN,0
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Alvin Kamara,12965,NO,RB,RB,19
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Ben Roethlisberger,394,PIT,QB,QB,24.02
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Carolina Panthers,2332,CAR,D/ST,D/ST,10
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Darren Sproles,3501,PHI,RB,BN,0
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,David Njoku,12904,CLE,TE,BN,3.6
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Devin Funchess,11194,CAR,WR,WR,12.7
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Dez Bryant,6559,FA,WR,BN,0
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Gerald Everett,12972,LAR,TE,BN,0.3
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Geronimo Allison,12353,GB,WR,RB/WR/TE,13.6
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,James Washington,13808,PIT,WR,TAXI,2.5
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Jerick McKinnon,10310,SF,RB,IR,0
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Josh Allen,13761,BUF,QB,TAXI,27.74
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Lamar Jackson,13775,BAL,QB,TAXI,0
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Leonard Fournette,12920,JAC,RB,BN,0
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Mark Andrews,13829,BAL,TE,TAXI,5.9
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Marshawn Lynch,4789,OAK,RB,RB,14.6
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Mohamed Sanu,8432,ATL,WR,BN,11.6
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Rex Burkhead,9426,NE,RB,BN,2.6
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Rob Gronkowski,6611,NE,TE,TE,5.1
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Robert Woods,9338,LAR,WR,WR/TE,23.7
+1107405,682472,conorclarke,Cleveland Browns SB420,2018,3,Russell Wilson,8598,SEA,QB,BN,15.58
 1107405,682472,conorclarke,Cleveland Browns SB69,2014,1,Andrew Hawkins,7348,CLE,WR,BN,8.7
 1107405,682472,conorclarke,Cleveland Browns SB69,2014,1,C.J. Spiller,6578,BUF,RB,RB,12.4
 1107405,682472,conorclarke,Cleveland Browns SB69,2014,1,Calvin Johnson,4671,DET,WR,WR/TE,28.4
@@ -13695,3 +13938,24 @@ team_id,manager_id,manager_name,team_name,season,week,player,player_id,player_te
 1115989,687399,zachzachzach,Phil Dawson and Friends,2018,2,Sterling Shepard,12058,NYG,WR,BN,2.4
 1115989,687399,zachzachzach,Phil Dawson and Friends,2018,2,Tarik Cohen,13003,CHI,RB,RB/WR/TE,2.5
 1115989,687399,zachzachzach,Phil Dawson and Friends,2018,2,Taywan Taylor,12973,TEN,WR,BN,9.2
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Andy Dalton,7404,CIN,QB,QB,14.08
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Auden Tate,13985,CIN,WR,TAXI,0
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Bilal Powell,7561,NYJ,RB,RB/WR/TE,7.3
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Carson Wentz,12032,PHI,QB,BN,11.2
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Chris Thompson,9552,WAS,RB,RB,1.7
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Cleveland Browns,2335,CLE,D/ST,D/ST,9
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Derrius Guice,13814,WAS,RB,TAXI,0
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Equanimeous St. Brown,13949,GB,WR,TAXI,0
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Eric Ebron,10257,IND,TE,BN,3.3
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Hunter Henry,12088,LAC,TE,BN,0
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Isaiah Crowell,10490,NYJ,RB,RB,17.1
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Jamison Crowder,11398,WAS,WR,BN,10.5
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Jimmy Graham,6610,GB,TE,TE,4.5
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,John Brown,10263,BAL,WR,WR,8.6
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Kelvin Benjamin,10254,BUF,WR,WR/TE,2.9
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Kenny Golladay,12963,DET,WR,WR,11.3
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Malcolm Brown,11724,LAR,RB,BN,4.2
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Ronald Jones,13785,TB,RB,BN,0
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Sterling Shepard,12058,NYG,WR,BN,14
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Tarik Cohen,13003,CHI,RB,BN,6.8
+1115989,687399,zachzachzach,Phil Dawson and Friends,2018,3,Taywan Taylor,12973,TEN,WR,BN,3
