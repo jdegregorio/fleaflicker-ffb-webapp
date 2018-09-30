@@ -1,0 +1,731 @@
+---
+title: "Fantasy Football Data Exploration"
+output: 
+  html_notebook:
+    code_folding: hide
+    toc: true
+    toc_float: true
+---
+
+# Introduction
+
+The following is an analysis of the "Will Carter Bowl" fantasy football league. The data was scraped from FleaFlicker.com using an  a python script written with BS4.
+
+The goal is to "tackle" the following questions:
+
+  * Team/Manager Performance and Style Metrics
+    * Power Rankings (smoothed mean variation of points)
+    * Efficiency
+    * Variation
+    * Lineup Errors
+        * Starting players on BYE
+        * Starting no one in a position slot
+        * Starting injured player
+    * Transactions
+        * Total number of transactions (by position, by team)
+        * Waiver trends
+        * Trade and Pickup Analysis
+    * Future Value
+        * Bench value
+        * Draft picks
+        * Average age of team by position
+    * Streaks over 100 pts
+
+  * Positional Strength
+    * What are the positional strengths and weakness of each team? 
+    * How have they changed over time?
+
+  * Positional Impact  
+    * How impactful are defense and kickers to the outcome of the league?
+    * What are the most important positions?
+
+  * Matchup Analysis
+    * All time manager vs. manager matchups
+    * All time all vs. all 
+    * All time records
+    * Luck Index (Spirit of WC)
+    * Winning/Lossing Streaks
+    
+  * Case Studies
+    * Is it possible to quantify how terrible Jim is as a human and as a fantasy football manager?
+    * Is it possible to prove that my (Joe's) lack of success is due to a statistical anomaly? 
+
+  * Oddball
+    * How many team names is too many team names?
+    
+
+
+```{r Install Packages, include=FALSE}
+ipak <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    suppressWarnings(suppressMessages(sapply(pkg, require, character.only = TRUE)))
+}
+
+ipak(c("tidyverse", "skimr", "kableExtra", "knitr"))
+
+theme_set(theme_light())
+scale_colour_discrete <- function(...) scale_colour_brewer(..., palette="Paired")
+scale_fill_discrete <- function(...) scale_fill_brewer(... , palette="Paired")
+
+```
+
+```{r Load Data, include=FALSE}
+df.stats <- read.csv("../Data/points.csv", header = TRUE)
+df.sched <- read.csv("../Data/schedules.csv", header = TRUE)
+```
+
+```{r Change Data Types, include=FALSE}
+
+#Convert stats dataframe
+tmp.conv <- c("team_id", "manager_id", "player_id")
+for (col in tmp.conv) {
+  df.stats[,col] <- as.factor(df.stats[,col])
+}
+
+#Convert schedule dataframe
+tmp.conv <- c("team_id", "team_id_opp", "matchup_type")
+for (col in tmp.conv) {
+  df.sched[,col] <- as.factor(df.sched[,col])
+}
+
+```
+
+```{r Sort Data, include=FALSE}
+df.stats <- df.stats %>%
+  arrange(season, week, team_id, set_pos, player_pos, player_name)
+
+df.sched <- df.sched %>%
+  arrange(season, week, result)
+
+```
+
+```{r Team Reference Data, include=FALSE}
+
+df.managers <- df.stats %>%
+  select(manager_id, manager_name) %>%
+  distinct() %>%
+  arrange(manager_name)
+
+df.managers$manager_name_short <- c("Aaron", "Cam", "Conor", "Dan", "Jim", "Joe", "Mike", "Sean", "Tom", "Tim", "Truax", "Will", "Zach")
+
+df.teams <- df.stats %>%
+  group_by(team_id) %>%
+  arrange(season, week) %>%
+  summarise(manager_id_cur = last(manager_id),
+            manager_name_cur = last(manager_name),
+            team_name_cur = last(team_name)) %>%
+  left_join(df.managers %>% select(manager_id, manager_name_short),
+            by = c("manager_id_cur" = "manager_id"))
+
+```
+
+# Team Performance
+
+## Power Rankings
+
+```{r}
+
+#Gather plot data
+tmp.plot <- df.stats %>%
+  group_by(team_id, season, week) %>%
+  filter(! set_pos %in% c("BN", "IR", "TAXI")) %>%
+  filter(as.integer(week) <= 13) %>%
+  summarise(points_total = sum(points)) %>%
+  ungroup() %>%
+  left_join(df.teams %>% select(team_id, manager_name_short), by="team_id") %>%
+  select(Manager = manager_name_short,
+         Season = season,
+         Week = week,
+         Points = points_total) %>%
+  arrange(Season, Week) %>%
+  mutate(Week = paste0(Season, "-", Week)) %>%
+  mutate(Week = factor(Week, ordered = TRUE))
+
+# Create Plot
+p <- ggplot(tmp.plot, aes(x = as.integer(Week), y = Points, col = Manager)) +
+  geom_smooth(method = 'loess', formula = 'y ~ x',level = 0.5, span = .8, alpha = 0.2) +
+  geom_vline(xintercept = seq(13, as.integer(max(tmp.plot$Week)), 13), alpha = 0.2) +
+  labs(title = paste("Power Rankings")) +
+  xlab("Weeks") +
+  ylab("Mean Points") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Print Plot
+print(p)
+  
+```
+
+## Point Distribution
+
+```{r fig.height=25, fig.width=10}
+tmp.plot <- df.stats %>%
+  left_join(df.managers %>% select(manager_id, manager_name_short), by="manager_id") %>%
+  select(manager_name_short,
+         season,
+         week,
+         set_pos,
+         points) %>%
+  filter(as.integer(week) <= 13) %>%
+  filter(! set_pos %in% c("BN", "IR", "TAXI")) %>%
+  group_by(season, week, manager_name_short) %>%
+  summarise(point_total = sum(points))
+
+ggplot(tmp.plot, 
+       aes(x = point_total, 
+           fill = reorder(manager_name_short, 
+                          point_total, 
+                          mean))) +
+  geom_density(alpha = 0.5, show.legend = FALSE) +
+  facet_wrap( ~ manager_name_short, ncol=1)
+
+```
+
+## Goose Eggs
+
+```{r}
+tmp.plot.all <- df.stats %>%
+  left_join(df.managers %>% select(manager_id, manager_name_short), by="manager_id") %>%
+  select(manager_name_short,
+         season,
+         week,
+         set_pos,
+         player_name,
+         points) %>%
+  filter(as.integer(week) <= 13) %>%
+  filter(! set_pos %in% c("BN", "IR", "TAXI")) %>%
+  group_by(manager_name_short) %>%
+  summarise(count_all = n())
+
+tmp.plot.ltz <- df.stats %>%
+  left_join(df.managers %>% select(manager_id, manager_name_short), by="manager_id") %>%
+  select(manager_name_short,
+         season,
+         week,
+         set_pos,
+         player_name,
+         points) %>%
+  filter(as.integer(week) <= 13) %>%
+  filter(! set_pos %in% c("BN", "IR", "TAXI")) %>%
+  filter(points <= 0) %>%
+  group_by(manager_name_short) %>%
+  summarise(count_ltz = n()) %>%
+  left_join(tmp.plot.all, by = "manager_name_short") %>%
+  mutate(rate = count_ltz/count_all) %>%
+  select(Manager = manager_name_short,
+         Rate = rate)
+
+#Plot team names
+ggplot(tmp.plot.ltz, aes(x = reorder(Manager, Rate), 
+                     y = Rate,
+                     fill = Rate)) +
+  geom_bar(stat = "identity", 
+           alpha = 0.8) +
+  scale_fill_gradient(low = "white", high = "firebrick4") +
+  labs(title = "Goose Eggs, or worse...",
+       subtitle = "Rate of Starts with Zero or Fewer Points") +
+  xlab("Manager") +
+  ylab("Goose Egg Rate") +
+  scale_y_continuous(labels = scales::percent) +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5),
+        legend.position = "none") +
+  coord_flip()
+
+
+```
+
+## Luck Index
+
+COnsider the following functions
+
+row_number(): equivalent to rank(ties.method = "first")
+
+min_rank(): equivalent to rank(ties.method = "min")
+
+dense_rank(): like min_rank(), but with no gaps between ranks
+
+percent_rank(): a number between 0 and 1 computed by rescaling min_rank to [0, 1]
+
+cume_dist(): a cumulative distribution function. Proportion of all values less than or equal to the current rank.
+
+ntile(): a rough rank, which breaks the input vector into n buckets
+
+```{r}
+
+```
+
+
+# Historical Matchups
+
+## All-time H2H Records
+```{r message=FALSE, warning=FALSE, include=FALSE}
+
+# Gather Wins
+tmp.plot.win <- df.sched %>%
+  filter(result == "W") %>%
+  left_join(df.teams %>% select(team_id, manager_name_short), by = "team_id") %>%
+  rename(manager_home = manager_name_short) %>%
+  left_join(df.teams %>% select(team_id, manager_name_short), by = c("team_id_opp" = "team_id")) %>%
+  rename(manager_away = manager_name_short) %>%
+  select(-team_id, -team_id_opp) %>%
+  group_by(manager_home, manager_away) %>%
+  summarize(Wins = n()) %>%
+  spread(key = manager_away,
+         value = Wins,
+         fill = 0)
+
+# Rename rows
+rownames(tmp.plot.win) <- tmp.plot.win$manager_home
+tmp.plot.win$manager_home <- NULL
+
+# Gather Losses
+tmp.plot.loss <- df.sched %>%
+  filter(result == "L") %>%
+  left_join(df.teams %>% select(team_id, manager_name_short), by = "team_id") %>%
+  rename(manager_home = manager_name_short) %>%
+  left_join(df.teams %>% select(team_id, manager_name_short), by = c("team_id_opp" = "team_id")) %>%
+  rename(manager_away = manager_name_short) %>%
+  select(-team_id, -team_id_opp) %>%
+  group_by(manager_home, manager_away) %>%
+  summarize(Losses = n()) %>%
+  spread(key = manager_away,
+         value = Losses,
+         fill = 0)
+
+# Rename rows
+rownames(tmp.plot.loss) <- tmp.plot.loss$manager_home
+tmp.plot.loss$manager_home <- NULL
+
+# Merge
+for (i in 1:nrow(tmp.plot.win)) {
+  for (j in 1:ncol(tmp.plot.win)) {
+    tmp.plot.win[i,j] <- paste(tmp.plot.win[i,j], tmp.plot.loss[i,j], sep = "-")
+    tmp.plot.win[i,j] <- ifelse(j == i, "-", tmp.plot.win[i,j])
+  }
+}
+
+```
+
+```{r}
+tmp.plot.win %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("hover", "condensed", "responsive"), full_width = F) %>%
+  column_spec(1, bold = T) %>%
+  row_spec(0, bold = T) %>%
+  row_spec(1:12, align = "center") %>%
+  #cell_spec(tmp.plot.win$Jim, popover = spec_popover(content = "Jim Sucks")) %>%
+  add_footnote(c("\n Rows represent the home team, columns are the away team", 
+                 "Records shown with notation:  home-away"), 
+               notation = "none")
+
+```
+
+## All-time H2H Point Differential
+```{r message=FALSE, warning=FALSE, include=FALSE}
+
+# Gather Wins
+tmp.plot.win <- df.sched %>%
+  left_join(df.teams %>% select(team_id, manager_name_short), by = "team_id") %>%
+  rename(manager_home = manager_name_short) %>%
+  left_join(df.teams %>% select(team_id, manager_name_short), by = c("team_id_opp" = "team_id")) %>%
+  rename(manager_away = manager_name_short) %>%
+  select(-team_id, -team_id_opp) %>%
+  mutate(point_dif = score_team - score_opp) %>%
+  group_by(manager_home, manager_away) %>%
+  summarize(point_dif = round(sum(point_dif),0)) %>%
+  spread(key = manager_away,
+         value = point_dif)
+
+# Rename rows
+rownames(tmp.plot.win) <- tmp.plot.win$manager_home
+tmp.plot.win$manager_home <- NULL
+
+
+# Merge
+for (i in 1:nrow(tmp.plot.win)) {
+  for (j in 1:ncol(tmp.plot.win)) {
+    tmp.plot.win[i,j] <- ifelse(j == i, "-", tmp.plot.win[i,j])
+  }
+}
+```
+
+```{r}
+tmp.plot.win %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("hover", "condensed", "responsive"), full_width = F) %>%
+  column_spec(1, bold = T) %>%
+  row_spec(0, bold = T) %>%
+  row_spec(1:12, align = "center") %>%
+  #cell_spec(tmp.plot.win$Jim, popover = spec_popover(content = "Jim Sucks")) %>%
+  add_footnote(c("\n Rows represent the home team, columns are the away team"), 
+               notation = "none")
+  
+  
+
+```
+
+## All-time All vs. All Records
+
+```{r include=FALSE}
+# All Versus All Records
+tmp.plot <- df.sched %>%
+  left_join(df.teams %>% select(team_id, manager_name_short), by = "team_id") %>%
+  select(season, week, manager_name_short, score_team) %>%
+  group_by(season, week) %>%
+  arrange(score_team) %>%
+  mutate(week_wins = row_number()-1,
+         week_losses = n() - week_wins) %>%
+  ungroup() %>%
+  group_by(manager_name_short) %>%
+  summarise(wins = sum(week_wins),
+            losses = sum(week_losses)) %>%
+  arrange(desc(wins)) %>%
+  select(Manager = manager_name_short, Wins = wins, Losses = losses)
+```
+
+```{r}
+tmp.plot %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("hover", "condensed", "responsive")) %>%
+  row_spec(0:12, align = "center") %>%
+  column_spec(1, bold = T)
+```
+
+
+# Positional Strength
+
+The following plots show the strength (mean weekly score of starters) of each position for each team. 
+
+```{r Prepare Positional Strength Data, include=FALSE}
+
+# Define Player Position Limits
+df.pos.lim <- data.frame("player_pos" = c("QB", "RB", "WR", "TE", "K", "D/ST"),
+                         "pos_lim" = c(1,2,3,1,1,1))
+
+# Initialize data frame for collecting starter results
+df.stats.toppos <- data.frame()
+
+# Gather stats from top n starters from each position
+for (i in 1:nrow(df.pos.lim)) {
+  
+  #Define position/limit for each player position
+  pos = df.pos.lim[i, "player_pos"]
+  lim = df.pos.lim[i,"pos_lim"]
+  
+  # Filter and select top n players
+  tmp.stats.toppos <- df.stats %>%
+    filter(! set_pos %in% c("BN", "IR", "TAXI")) %>%
+    filter(player_pos == pos) %>%
+    filter(as.integer(week) <= 13) %>%
+    group_by(team_id, season, week) %>%
+    top_n(lim, points) %>%
+    ungroup() %>%
+    left_join(df.teams %>% select(team_id, manager_name_short), by="team_id") %>%
+    select(Manager = manager_name_short,
+           Season = season,
+           Week = week,
+           Position = player_pos,
+           Player = player_name,
+           Points = points)
+  
+  # Compile Results
+  df.stats.toppos <- rbind(df.stats.toppos, tmp.stats.toppos)
+}
+
+# Initialize data frame for collecting starter results
+df.stats.topben <- data.frame()
+
+# Gather stats from top bench player for each position
+for (i in 1:nrow(df.pos.lim)) {
+  
+  #Define position/limit for each player position
+  pos = df.pos.lim[i, "player_pos"]
+  lim = 1
+  
+  # Filter and select top n players
+  tmp.stats.topben <- df.stats %>%
+    filter(set_pos %in% c("BN", "TAXI")) %>%
+    filter(player_pos == pos) %>%
+    filter(as.integer(week) <= 13) %>%
+    group_by(team_id, season, week) %>%
+    top_n(lim, points) %>%
+    ungroup() %>%
+    left_join(df.teams %>% select(team_id, manager_name_short), by="team_id") %>%
+    select(Manager = manager_name_short,
+           Season = season,
+           Week = week,
+           Position = player_pos,
+           Player = player_name,
+           Points = points)
+  
+  # Compile Results
+  df.stats.topben <- rbind(df.stats.topben, tmp.stats.topben)
+}
+
+```
+
+## Starters
+```{r fig.height=24, fig.width=12}
+
+# Define temporary plot data
+tmp.plot <- df.stats.toppos %>%
+  filter(Position != "K") %>%
+  arrange(Season, Week) %>%
+  mutate(Week = paste0(Season, "-", Week)) %>%
+  mutate(Week = factor(Week, ordered = TRUE))
+
+# Define Year Labels
+#years <- seq(round(max(tmp.plot$Week/13),0)
+
+# Create Plot
+p <- ggplot(tmp.plot, aes(x = as.integer(Week), y = Points, col = Position)) +
+  geom_smooth(method = 'loess', formula = 'y ~ x',level = 0.5, span = .8, alpha = 0.2) +
+  geom_vline(xintercept = seq(13, as.integer(max(tmp.plot$Week)), 13), alpha = 0.2) +
+  theme_light() +
+  labs(title = paste("Starting Positional Strength Over Time")) +
+  xlab("Weeks") +
+  ylab("Points") +
+  ylim(c(0,30)) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p <- p + facet_wrap( ~ Manager, ncol=2)
+
+# Print Plot
+print(p)
+  
+
+```
+
+## Bench
+```{r fig.height=24, fig.width=12}
+
+# Define temporary plot data
+tmp.plot <- df.stats.topben %>%
+  filter(! Position %in% c("K", "D/ST")) %>%
+  arrange(Season, Week) %>%
+  mutate(Week = paste0(Season, "-", Week)) %>%
+  mutate(Week = factor(Week, ordered = TRUE))
+
+# Create Plot
+p <- ggplot(tmp.plot, aes(x = as.integer(Week), y = Points, col = Position)) +
+  geom_smooth(method = 'loess', formula = 'y ~ x',level = 0.5, span = .8, alpha = 0.2) +
+  geom_vline(xintercept = seq(13, as.integer(max(tmp.plot$Week)), 13), alpha = 0.2) +
+  labs(title = paste("Bench Positional Strength Over Time")) +
+  xlab("Weeks") +
+  ylab("Points") +
+  ylim(c(0,30)) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p <- p + facet_wrap( ~ Manager, ncol=2)
+
+# Print Plot
+print(p)
+  
+```
+
+# Position Impact Analysis
+
+
+## Positional Point Diffential
+Compares the 
+```{r}
+
+# Define Player Position Limits
+df.pos.lim <- data.frame("player_pos" = c("QB", "RB", "WR", "TE", "K", "D/ST"),
+                         "pos_lim" = c(1,2,3,1,1,1))
+
+tmp.plot <- df.stats %>%
+  select(season,
+         week,
+         player_pos,
+         set_pos,
+         points) %>%
+  left_join(df.pos.lim, by = "player_pos") %>%
+  filter(as.integer(week) <= 13) %>%
+  filter(! set_pos %in% c("BN", "IR", "TAXI")) %>%
+  group_by(season, week, player_pos) %>%
+  arrange(desc(points)) %>%
+  mutate(rank_pos = row_number(),
+         rank = ifelse(rank_pos <= pos_lim*6, "Top", "Bottom")) %>%
+  ungroup() %>%
+  group_by(season, week, player_pos, rank) %>%
+  summarise(points_mean = mean(points)) %>%
+  spread(rank, points_mean) %>%
+  mutate(points_dif = Top - Bottom) %>%
+  select(Position = player_pos, `Point Differential` = points_dif)
+  
+
+ggplot(tmp.plot, aes(x = reorder(Position, `Point Differential`, median), y = `Point Differential`)) +
+  geom_boxplot(alpha = 0.8, outlier.shape = NA) +
+  geom_jitter(alpha = 0.6, width = 0.25, aes(col = Position)) +
+  labs(title = paste("Mean Point Differential - Best vs. Worse Weekly")) +
+  xlab("Positions") +  
+  ylab("Mean Point Differential") +
+  theme(plot.title = element_text(hjust = 0.5), legend.position = "none")
+  
+
+```
+
+## Match Outcome Impact Rate
+
+```{r}
+
+# Define Player Position Limits
+df.pos.lim <- data.frame("player_pos" = c("QB", "RB", "WR", "TE", "K", "D/ST"),
+                         "pos_lim" = c(1,2,3,1,1,1))
+
+# Gaher player stats and ranked positions
+tmp.stats <- df.stats %>%
+  select(season,
+         week,
+         team_id,
+         player_pos,
+         set_pos,
+         points) %>%
+  left_join(df.pos.lim, by = "player_pos") %>%
+  filter(as.integer(week) <= 13) %>%
+  filter(! set_pos %in% c("BN", "IR", "TAXI")) %>%
+  group_by(season, week, team_id, player_pos) %>%
+  arrange(points) %>%
+  mutate(rank = row_number()) %>%
+  filter(rank <= pos_lim) %>%
+  ungroup() %>%
+  mutate(player_pos = as.character(player_pos),
+         player_pos = ifelse(pos_lim > 1,
+                             paste0(player_pos, rank),
+                             player_pos)) %>%
+  select(season, week, team_id, player_pos, points)
+  
+# Gather match point differntial each week
+tmp.match <- df.sched %>%
+  filter(result == "W",
+         week <= 13) %>%
+  select(season, week, team_id, team_id_opp, score_team, score_opp) %>%
+  mutate(score_dif = score_team - score_opp,
+         match_id = paste(team_id, team_id_opp, sep = "-")) %>%
+  select(season, week, match_id, score_dif)
+
+# Calculate ratios between player/match point differntials and determine outcome impact
+tmp.plot <- df.sched %>%
+  filter(result == "W",
+         week <= 13) %>%
+  select(season, week, team_id, team_id_opp) %>%
+  mutate(match_id = paste(team_id, team_id_opp, sep = "-")) %>%
+  gather(key = team_type, value = team_id, team_id, team_id_opp) %>%
+  left_join(tmp.stats, by = c("season", "week", "team_id")) %>%
+  mutate(points = ifelse(team_type == "team_id_opp", 
+                         -points, 
+                         points)) %>%
+  group_by(season, week, match_id, player_pos) %>%
+  summarise(points_dif = abs(sum(points))) %>%
+  ungroup() %>%
+  left_join(tmp.match, by = c("season", "week", "match_id")) %>%
+  mutate(impact_rto = points_dif/score_dif,
+         impact_result = impact_rto >= 1) %>%
+  select(season, week, match_id, player_pos, impact_rto, impact_result) %>%
+  rename(Position = player_pos, Ratio = impact_rto, `Impact Result` = impact_result) %>%
+  group_by(Position) %>%
+  summarise(impact_pct = sum(`Impact Result`)/n()) %>%
+  ungroup()
+
+  
+# Plot
+ggplot(tmp.plot, aes(x = reorder(Position, impact_pct), y = impact_pct, fill = impact_pct)) +
+  geom_bar(stat = "identity", alpha = 0.8) +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_gradient(low = "white", high = "firebrick4") +
+  labs(title = "Matchup Outcome Impact by Position",
+       subtitle = "Percentage of matchups where positional point difference\n would have changed the match outcome") +
+  xlab("Positions") +  
+  ylab("Percent Impact") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        plot.subtitle = element_text(hjust = 0.5), 
+        legend.position = "none") +
+  coord_flip()
+  
+
+```
+
+# Other Odds and Ends
+
+## Tightest Match and Biggest Whomping
+
+```{r}
+tmp.plot <- df.sched %>%
+  filter(result == "W") %>%
+  select(season, week, team_id, team_id_opp, score_team, score_opp) %>%
+  mutate(score_dif = score_team - score_opp) %>%
+```
+
+
+## Team Names Insecurity 
+
+```{r}
+
+# Gather team name data
+df.teamnames <- df.stats %>%
+  select(manager_name, team_name) %>%
+  distinct() %>%
+  group_by(manager_name) %>%
+  summarise(Count = n(),
+            Names = paste0(team_name, collapse = ", ")) %>%
+  arrange(desc(Count)) %>%
+  rename(Manager = manager_name)
+
+#Plot team names
+ggplot(df.teamnames, 
+       aes(x = reorder(Manager, Count), 
+           y = Count)) +
+  geom_bar(stat = "identity", 
+           alpha = 0.8) +
+  geom_text(aes(x = Manager, 
+                y = 0.1, 
+                label = Names, 
+                hjust = 0, 
+                vjust = 0.5), 
+            size = 2.5, 
+            col = "white") +
+  labs(title = "Team Name Insecurity") +
+  xlab("Manager") +
+  ylab("Number of Team Names") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  coord_flip()
+
+```
+
+## Championship Losses to Rob Dvorak
+
+```{r}
+tmp.plot <- 
+  data.frame("Manager" = c("Aaron", "Jim", "Tim", "Cam", "Sean", "Dan", "Will", "Truax", "Joe", "Tom", "Conor", "Zach"), 
+             "Outcome" = c(2,-1,0,0,0,0,0,0,0,0,0,0), 
+             "type" = c("W", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "L"))
+
+ggplot(tmp.plot, aes(x = reorder(Manager, abs(Outcome)), y = Outcome)) +
+  geom_bar(stat = "identity", aes(fill = type), col = "black", alpha = 0.8) +
+  geom_text(aes(x = "Jim", y = -0.5, label = "Jim is a failure."), col = "white") +
+  geom_text(aes(x = "Aaron", y = 1, label = "Aaron did his job.  Twice..."), col = "white") +
+  geom_text(aes(x = "Cam", y = 0.5, label = "Wins"), col = "black") +
+  geom_text(aes(x = "Cam", y = -0.5, label = "Losses"), col = "black") +
+  geom_vline(xintercept = 0) +
+  theme_light() +
+  scale_fill_manual(values=c("firebrick3", "forestgreen")) +
+  labs(title = "Championship Outcomes vs. Rob Dvorak") +
+  xlab("Manager") +
+  ylab("Outcome") +
+  ylim(c(-2,2)) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  coord_flip()
+
+
+```
+
+
+
+```{r}
+# Cleanup Workspace=
+rm(list = ls(pattern = "^tbl.|^tmp.|^con.|^pack.|^[:alpha::]$"))
+```
+
