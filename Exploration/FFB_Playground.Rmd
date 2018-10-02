@@ -103,12 +103,15 @@ df.sched <- df.sched %>%
 
 ```{r Team Reference Data, include=FALSE}
 
+df.managers.short <- data.frame("manager_name" = c("AMackel", "CameronRouzer", "conorclarke", "dayello", "jimayello", "JoeDeGregorio", "M_Stojanovic", "SeanMcNally", "THaze", "TimMartens", "Truax", "WillPo", "zachzachzach"), 
+                                "manager_name_short" = c("Aaron", "Cam", "Conor", "Dan", "Jim", "Joe", "Mike", "Sean", "Tom", "Tim", "Truax", "Will", "Zach"))
+
 df.managers <- df.stats %>%
   select(manager_id, manager_name) %>%
   distinct() %>%
-  arrange(manager_name)
+  arrange(manager_name) %>%
+  left_join(df.managers.short, by = "manager_name")
 
-df.managers$manager_name_short <- c("Aaron", "Cam", "Conor", "Dan", "Jim", "Joe", "Mike", "Sean", "Tom", "Tim", "Truax", "Will", "Zach")
 
 df.teams <- df.stats %>%
   group_by(team_id) %>%
