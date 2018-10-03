@@ -1,2 +1,2 @@
 library(rsconnect)
-rsconnect::deployApp("./Apps/wcb")
+rsconnect::deployApp("./Apps/wcbowl")

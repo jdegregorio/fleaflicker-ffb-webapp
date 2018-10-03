@@ -34,15 +34,14 @@ function(input, output) {
     
     #Gather Data
     tmp.plot <- df.stats.startreg %>%
-      left_join(df.managers %>% select(manager_id, manager_name_short), by="manager_id") %>%
       filter(season >= input$season[1] & season <= input$season[2]) %>%
       filter(manager_name_short %in% input$managers) %>%
       group_by(season, week, manager_name_short) %>%
       summarise(point_total = sum(points))
-    
+
     # Generate Plot
-    ggplot(tmp.plot, 
-           aes(x = point_total, 
+    ggplot(tmp.plot,
+           aes(x = point_total,
                fill = manager_name_short)) +
       geom_density(alpha = 0.3) +
       labs(x = "Points", y = "Density", fill = "Manager")
