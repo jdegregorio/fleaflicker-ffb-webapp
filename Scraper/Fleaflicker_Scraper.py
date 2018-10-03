@@ -430,19 +430,29 @@ def getSchedules( league_id , start_season, end_season ):
 
     return df
 
+def findNew( df_points, df_schedules):
+    x=1
+    return x
+
+
 # --------SCRIPT---------
+import os
+os.__file__
+os.path.dirname("Fleaflicker_Scraper.py")
 
 # Define Variables
 league_id = '154290'
 
 # Get Current Week/Season
+start_week, start_season, end_season = getCurrent(league_id)
 
-
-# Check for empty weeks
+# Check for existing data
+#df_points_old = pd.read_csv('../Data/points.csv', encoding = "utf-8")
+#df_schedules_old = pd.read_csv("/Data/schedules.csv", encoding = "utf-8")
 
 # Gather data using previously defined functions
-df_points = getPoints(league_id , 4, 2018, 2014)
-df_schedules = getSchedules(league_id, 2018, 2014)
+df_points = getPoints(league_id , start_week, start_season, end_season)
+df_schedules = getSchedules(league_id, start_season, end_season)
 
 # Save Data
 df_points.to_csv("../Data/points.csv", index = False, encoding = "utf-8")
