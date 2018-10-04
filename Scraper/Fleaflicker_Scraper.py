@@ -80,7 +80,7 @@ def getCurrent( league_id ):
         if item == current_week:
             start_week = i
 
-    return  start_week, end_season, start_season
+    return  start_week, start_season, end_season
 
 
 def getTeams( league_id , season ):
@@ -144,13 +144,14 @@ def getTeams( league_id , season ):
 
     return df
 
-def getPoints( league_id , start_week, start_season, end_season ):
+def getPoints( league_id , weeks_new ):
 
     # Create list to store team data
     point_data = []
 
-
-    for season in list(reversed(range(end_season, start_season+1))):
+    for week in weeks_new:
+        season = week[0]
+        week = week[1]
 
         # Gather team information
         df_teams = getTeams(league_id, season)
@@ -163,106 +164,100 @@ def getPoints( league_id , start_week, start_season, end_season ):
             manager_name = df_teams.manager_name[i]
             team_name = df_teams.team_name[i]
 
-            for week in list(reversed(range(1, 17))):
+            # Concatenate league id to form league url
+            url = ('https://www.fleaflicker.com/nfl/leagues/' +
+                          league_id + '/teams/' + str(team_id) + '?season='
+                          + str(season) + '&week=' + str(week))
 
-                # Skip future weeks if current season
-                if (season == start_season) and (week >= start_week):
+            # Sleep 2 sec before loading page
+            sleep(2)
+
+            # Print Status
+            print(url)
+
+            # Request page and create soup
+            req = reqPage(url)
+
+            # Create Soup
+            soup  = BeautifulSoup(req.text, 'html.parser')
+            if type(soup) is type(None):
+                print('No soup for you...  ', url)
+                continue
+
+            # Find Primary Table
+            table = soup.find('table',
+                              attrs={'class': ('table-group table table-st'
+                                      'riped table-bordered table-hover')})
+
+            # Find rows in table
+            rows = table.find_all('tr')
+
+            for row in rows:
+
+                # Player Name
+                key = 'player_name'
+                try:
+                    target = row.find('div', attrs={'class': 'player'})
+                    player_name = target.find('a', attrs={'class': 'player-text'}).text.strip()
+                except:
                     continue
 
-                # Concatenate league id to form league url
-                url = ('https://www.fleaflicker.com/nfl/leagues/' +
-                              league_id + '/teams/' + str(team_id) + '?season='
-                              + str(season) + '&week=' + str(week))
+                # Player ID
+                key = 'player_id'
+                try:
+                    target = row.find('div', attrs={'class': 'player'})
+                    target = target.find('a', attrs={'class': 'player-text'})
+                    target = target.get('href')
+                    val = re.findall('(?<=-)[0-9]{1,}', target)[0]
+                    point_data.append([team_id,  manager_id,  manager_name,
+                                       team_name, season, week, player_name,
+                                       key, val])
+                except:
+                    print('    -Could not find attribute: %s' % (key))
 
-                # Sleep 2 sec before loading page
-                sleep(2)
+                # Player Position
+                key = 'player_pos'
+                try:
+                    target = row.find('div', attrs={'class': 'player'})
+                    val = target.find('span', attrs={'class': 'position'}).text.strip()
+                    point_data.append([team_id,  manager_id,  manager_name,
+                                       team_name, season, week, player_name,
+                                       key, val])
+                except:
+                    print('    -Could not find attribute: %s' % (key))
 
-                # Print Status
-                print(url)
+                # Player Team
+                key = 'player_team'
+                try:
+                    target = row.find('div', attrs={'class': 'player'})
+                    val = target.find('span', attrs={'class': 'player-team'}).text.strip()
+                    point_data.append([team_id,  manager_id,  manager_name,
+                                       team_name, season, week, player_name,
+                                       key, val])
+                except:
+                    print('    -Could not find attribute: %s' % (key))
 
-                # Request page and create soup
-                req = reqPage(url)
+                # Set Position
+                key = 'set_pos'
+                try:
+                    target = row.find_all('td')[-1]
+                    val = target.text.strip()
+                    point_data.append([team_id,  manager_id,  manager_name,
+                                       team_name, season, week, player_name,
+                                       key, val])
+                except:
+                    print('    -Could not find attribute: %s' % (key))
 
-                # Create Soup
-                soup  = BeautifulSoup(req.text, 'html.parser')
-                if type(soup) is type(None):
-                    print('No soup for you...  ', url)
-                    continue
-
-                # Find Primary Table
-                table = soup.find('table',
-                                  attrs={'class': ('table-group table table-st'
-                                          'riped table-bordered table-hover')})
-
-                # Find rows in table
-                rows = table.find_all('tr')
-
-                for row in rows:
-
-                    # Player Name
-                    key = 'player_name'
-                    try:
-                        target = row.find('div', attrs={'class': 'player'})
-                        player_name = target.find('a', attrs={'class': 'player-text'}).text.strip()
-                    except:
-                        continue
-
-                    # Player ID
-                    key = 'player_id'
-                    try:
-                        target = row.find('div', attrs={'class': 'player'})
-                        target = target.find('a', attrs={'class': 'player-text'})
-                        target = target.get('href')
-                        val = re.findall('(?<=-)[0-9]{1,}', target)[0]
-                        point_data.append([team_id,  manager_id,  manager_name,
-                                           team_name, season, week, player_name,
-                                           key, val])
-                    except:
-                        print('    -Could not find attribute: %s' % (key))
-
-                    # Player Position
-                    key = 'player_pos'
-                    try:
-                        target = row.find('div', attrs={'class': 'player'})
-                        val = target.find('span', attrs={'class': 'position'}).text.strip()
-                        point_data.append([team_id,  manager_id,  manager_name,
-                                           team_name, season, week, player_name,
-                                           key, val])
-                    except:
-                        print('    -Could not find attribute: %s' % (key))
-
-                    # Player Team
-                    key = 'player_team'
-                    try:
-                        target = row.find('div', attrs={'class': 'player'})
-                        val = target.find('span', attrs={'class': 'player-team'}).text.strip()
-                        point_data.append([team_id,  manager_id,  manager_name,
-                                           team_name, season, week, player_name,
-                                           key, val])
-                    except:
-                        print('    -Could not find attribute: %s' % (key))
-
-                    # Set Position
-                    key = 'set_pos'
-                    try:
-                        target = row.find_all('td')[-1]
-                        val = target.text.strip()
-                        point_data.append([team_id,  manager_id,  manager_name,
-                                           team_name, season, week, player_name,
-                                           key, val])
-                    except:
-                        print('    -Could not find attribute: %s' % (key))
-
-                    # Fantasy Points
-                    key = 'points'
-                    try:
-                        target = row.find('a', attrs={'class': 'points-final'})
-                        val = target.text.strip()
-                        point_data.append([team_id,  manager_id,  manager_name,
-                                           team_name, season, week, player_name,
-                                           key, val])
-                    except:
-                        print('    -Could not find attribute: %s' % (key))
+                # Fantasy Points
+                key = 'points'
+                try:
+                    target = row.find('a', attrs={'class': 'points-final'})
+                    val = target.text.strip()
+                    point_data.append([team_id,  manager_id,  manager_name,
+                                       team_name, season, week, player_name,
+                                       key, val])
+                except:
+                    print('    -Could not find attribute: %s' % (key))
 
 
 
@@ -298,12 +293,13 @@ def getPoints( league_id , start_week, start_season, end_season ):
 
     return df
 
-def getSchedules( league_id , start_season, end_season ):
+def getSchedules( league_id , weeks_new ):
 
     # Create list to store matchup data
     schedule_data = []
 
-    for season in list(reversed(range(end_season, start_season+1))):
+    for week in weeks_new:
+        season = week[0]
 
         # Gather team information
         df_teams = getTeams(league_id, season)
@@ -430,30 +426,70 @@ def getSchedules( league_id , start_season, end_season ):
 
     return df
 
-def findNew( df_points, df_schedules):
-    x=1
-    return x
+def checkNew( league_id , filepath ):
 
+    # Load file, flag if missing
+    file_missing = False
+    try:
+        df_old = pd.read_csv(filepath, encoding = "utf-8")
+    except:
+        print('File not found, defaulting to all available weeks')
+        file_missing = True
+
+    # List out available weeks
+    weeks_avl = []
+    start_week, start_season, end_season = getCurrent(league_id)
+    for season in list(reversed(range(end_season, start_season+1))):
+        for week in list(reversed(range(1, 17))):
+            # Skip future weeks if current season
+            if (season == start_season) and (week > start_week):
+                continue
+            weeks_avl.append([season, week])
+
+    # Return available weeks if there is no existing file
+    if file_missing:
+        return weeks_avl
+
+    # If file does exist, extract week values
+    weeks_old = df_old[['season', 'week']].drop_duplicates().values.tolist()
+
+    # Find new available weeks not already stored in file
+    weeks_new = [x for x in weeks_avl if x not in weeks_old]
+
+    return weeks_new
+
+def saveNew( df_new , filepath ):
+
+    # Load file, flag if missing
+    try:
+        df_old = pd.read_csv(filepath, encoding = "utf-8")
+    except:
+        print('File not found, saving only new data')
+        df_new.to_csv(filepath, index = False, encoding = "utf-8")
+        return
+
+    # Combine new/old and remove duplicates
+    df_comb = df_old.append(df_new, ignore_index = True)
+    df_comb.drop_duplicates(inplace=True)
+
+    # Save Data
+    df_comb.to_csv(filepath, index = False, encoding = "utf-8")
 
 # --------SCRIPT---------
-import os
-os.__file__
-os.path.dirname("Fleaflicker_Scraper.py")
 
 # Define Variables
 league_id = '154290'
+filepath_points = 'C:/scripts/data/points.csv'
+filepath_schedules = 'C:/scripts/data/schedules.csv'
 
-# Get Current Week/Season
-start_week, start_season, end_season = getCurrent(league_id)
+# Check for new data
+weeks_new_points = checkNew(league_id, filepath_points)
+weeks_new_schedule = checkNew(league_id, filepath_schedules)
 
-# Check for existing data
-#df_points_old = pd.read_csv('../Data/points.csv', encoding = "utf-8")
-#df_schedules_old = pd.read_csv("/Data/schedules.csv", encoding = "utf-8")
-
-# Gather data using previously defined functions
-df_points = getPoints(league_id , start_week, start_season, end_season)
-df_schedules = getSchedules(league_id, start_season, end_season)
+# Gather new data
+df_points = getPoints(league_id , weeks_new_points)
+df_schedules = getSchedules(league_id, weeks_new_schedule)
 
 # Save Data
-df_points.to_csv("../Data/points.csv", index = False, encoding = "utf-8")
-df_schedules.to_csv("../Data/schedules.csv", index = False, encoding = "utf-8")
+saveNew(df_points, filepath_points)
+saveNew(df_schedules, filepath_schedules)
