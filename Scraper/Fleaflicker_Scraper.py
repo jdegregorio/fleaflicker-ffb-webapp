@@ -146,6 +146,11 @@ def getTeams( league_id , season ):
 
 def getPoints( league_id , weeks_new ):
 
+    # Check if weeks_new is length zero
+    if len(weeks_new) == 0:
+        print('No new data')
+        return
+
     # Create list to store team data
     point_data = []
 
@@ -294,6 +299,11 @@ def getPoints( league_id , weeks_new ):
     return df
 
 def getSchedules( league_id , weeks_new ):
+
+    # Check if weeks_new is length zero
+    if len(weeks_new) == 0:
+        print('No new data')
+        return
 
     # Create list to store matchup data
     schedule_data = []
