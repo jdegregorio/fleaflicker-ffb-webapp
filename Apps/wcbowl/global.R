@@ -12,6 +12,7 @@ df.stats <- read.csv("data/points.csv", header = TRUE, stringsAsFactors = FALSE)
 df.sched <- read.csv("data/schedules.csv", header = TRUE, stringsAsFactors = FALSE)
 df.managers.short <- read.csv("data/managers_short.csv", header = TRUE, stringsAsFactors = FALSE)
 df.pos.lim <- read.csv("data/position_limits.csv", header = TRUE, stringsAsFactors = FALSE)
+
 # ----Data Prep----
 
 # Add Positional Rank Column
@@ -69,24 +70,61 @@ df.teams <- df.stats %>%
   left_join(df.managers %>% select(manager_id, manager_name_short),
             by = c("manager_id_cur" = "manager_id"))
 
-
-# ---- UI Functions ----
+# ---- Define UI Input Elements----
 opt.managers <- df.managers$manager_name_short  # list of managers
-opt.posranks <- c("QB1", "QB2", "QB3", "RB1", "RB2", "RB3", "RB4", "WR1", "WR2", "WR3", "WR4", "WR5", "TE1", "TE2", "D/ST1", "D/ST2")
+opt.posranks <- c("QB1", "QB2", "QB3", "RB1", "RB2", "RB3", "RB4", "WR1", "WR2",
+                  "WR3", "WR4", "WR5", "TE1", "TE2", "D/ST1", "D/ST2")
 
 
+# Recommended Formatting Checkbox ("Jim Sucks")
+inp.chk.jimsucks <- 
+  checkboxInput("js_checkbox", "Recommended Formatting", value = FALSE)
 
+# Chart Category Dropdown Selection
+inp.select.category <- 
+  selectInput("category",
+              label = "Choose a Category",
+              choices = list("Power Rankings",
+                             "Point Distribution",
+                             "Positional Strength",
+                             "Championships vs Dvorak"
+              ),
+              selected = "Power Rankings")
 
+# Season Filter Slider
+inp.slider.season <- 
+  sliderInput("season", 
+              strong("Season"),
+              min = min(df.stats$season), 
+              max = max(df.stats$season),
+              value = c(min(df.stats$season), 
+                        max(df.stats$season)),
+              step = 1,
+              round = TRUE,
+              sep = "",
+              width = "100%")
 
+# Manager Grouped Checkboxes
+inp.chkgrp.managers <- 
+  checkboxGroupInput("managers", 
+                     strong("Team"), 
+                     choices = df.managers$manager_name_short,
+                     selected = df.managers$manager_name_short[1],
+                     width = "100%")
 
+# Positions Grouped Checkboxes
+inp.chkgrp.positions <- 
+  checkboxGroupInput("positions", 
+                     strong("Positions"), 
+                     choices = opt.posranks,
+                     selected = opt.posranks[1],
+                     width = "100%")
 
+# Update Buttom
+inp.action.update <- actionButton("update", "Update View")
 
-
-
-
-
-
-
-
-
-
+# Combined side-by-side grouped checkboxes (managers, positions)
+inp.form.manpos <- 
+  fluidRow(column(6, inp.chkgrp.managers),
+           column(6,inp.chkgrp.positions))
+  

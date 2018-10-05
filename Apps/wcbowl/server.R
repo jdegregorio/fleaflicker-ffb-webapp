@@ -1,5 +1,24 @@
 function(input, output) {
   
+  # ---- Input Options----
+  output$ui <- renderUI({
+    
+    # Dynamically change inputs based on category type
+    switch(input$category,
+           "Power Rankings" = tagList(inp.slider.season),
+           
+           "Point Distribution" = tagList(inp.slider.season, 
+                                          inp.chkgrp.managers,
+                                          inp.action.update),
+           
+           "Positional Strength" = tagList(inp.slider.season, 
+                                           inp.form.manpos,
+                                           inp.action.update)
+
+    )
+    
+  })
+  
   # ----Selected Category----
   output$selected_category <- renderText({input$category})
   
@@ -32,10 +51,13 @@ function(input, output) {
   # ----Distribution Plot----
   output$plot_dist <- renderPlot({
     
+    # Add dependency to update buttom
+    input$update
+    
     #Gather Data
     tmp.plot <- df.stats.startreg %>%
       filter(season >= input$season[1] & season <= input$season[2]) %>%
-      filter(manager_name_short %in% input$managers) %>%
+      filter(manager_name_short %in% isolate(input$managers)) %>%
       group_by(season, week, manager_name_short) %>%
       summarise(point_total = sum(points))
 
@@ -51,20 +73,24 @@ function(input, output) {
   # ----Positional Strength----
   output$plot_pos_strength <- renderPlot({
     
+    # Add dependency to update buttom
+    input$update
+    
+    # Prep Data
     tmp.plot <- df.stats %>%
       filter(season >= input$season[1] & season <= input$season[2]) %>%
-      filter(manager_name_short %in% input$managers) %>%
-      filter(posrank_tot %in% input$positions) %>%
+      filter(manager_name_short %in% isolate(input$managers)) %>%
+      filter(posrank_tot %in% isolate(input$positions)) %>%
       arrange(season, week) %>%
       mutate(week = paste0(season, "-", week)) %>%
       mutate(week = factor(week, ordered = TRUE))
     
+    # Plot
     ggplot(tmp.plot, aes(x = as.integer(week), 
                          y = points, 
                          col = manager_name_short,
                          linetype = posrank_tot)) +
-      geom_smooth(level = 0.5, alpha = 0.2) +
-      geom_vline(xintercept = seq(13, as.integer(max(tmp.plot$week)), 13), alpha = 0.2) +
+      geom_smooth(method = 'loess', formula = 'y ~ x', level = 0.5, span = 0.8, alpha = 0.2) +
       labs(x = "Weeks", y = "Points", col = "Manager", linetype = "Position")
 
   })
