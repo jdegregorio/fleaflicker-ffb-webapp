@@ -3,7 +3,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073358,2014,10,1089754,Non-Division Game,L,55.58,77.84
 1073358,2014,11,1073370,Division Game,W,69.7,63.62
 1073358,2014,12,1115989,Division Game,L,38.8,108.54
-1073358,2014,13,1073420,Division Game,L,100,131.24
+1073358,2014,13,1073420,Division Game,L,100.0,131.24
 1073358,2014,14,1115989,Consolation Game,W,108.04,73.86
 1073358,2014,15,1089754,Consolation Game,W,104.76,88.28
 1073358,2014,16,1087309,Consolation Game,W,81.8,78.9
@@ -76,7 +76,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073361,2014,5,1089754,Division Game,W,101.68,97.28
 1073361,2014,6,1075098,Division Game,L,72.6,88.78
 1073361,2014,7,1107405,Non-Division Game,W,97.86,93.42
-1073361,2014,8,1073395,Division Game,L,75,94.12
+1073361,2014,8,1073395,Division Game,L,75.0,94.12
 1073361,2014,9,1073671,Division Game,L,80.86,120.72
 1073361,2015,1,1073395,Division Game,W,91.62,88.96
 1073361,2015,10,1073363,Non-Division Game,L,66.76,99.98
@@ -96,7 +96,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073361,2016,1,1075098,Division Game,W,100.8,85.4
 1073361,2016,10,1073420,Non-Division Game,W,118.34,101.78
 1073361,2016,11,1087309,Division Game,L,98.68,100.1
-1073361,2016,12,1073671,Division Game,W,110.66,85
+1073361,2016,12,1073671,Division Game,W,110.66,85.0
 1073361,2016,13,1073395,Division Game,W,122.62,96.56
 1073361,2016,14,1075098,Playoff Game,W,106.64,80.16
 1073361,2016,15,1073420,Playoff Game,W,81.7,75.14
@@ -107,13 +107,13 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073361,2016,5,1073671,Division Game,L,87.38,96.08
 1073361,2016,6,1073395,Division Game,W,102.72,100.56
 1073361,2016,7,1107405,Non-Division Game,W,93.72,55.98
-1073361,2016,8,1075098,Division Game,W,104.7,97
+1073361,2016,8,1075098,Division Game,W,104.7,97.0
 1073361,2016,9,1089754,Division Game,W,75.54,55.9
 1073361,2017,1,1073395,Division Game,L,55.12,95.34
 1073361,2017,10,1073363,Non-Division Game,L,59.32,88.96
 1073361,2017,11,1087309,Division Game,L,78.26,91.6
 1073361,2017,12,1089754,Division Game,L,83.1,101.06
-1073361,2017,13,1075098,Division Game,L,80.96,93
+1073361,2017,13,1075098,Division Game,L,80.96,93.0
 1073361,2017,14,1073420,Consolation Game,L,64.82,77.04
 1073361,2017,2,1073671,Division Game,W,111.48,104.54
 1073361,2017,3,1073370,Non-Division Game,L,60.3,80.4
@@ -155,7 +155,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073363,2015,7,1075098,Non-Division Game,W,90.78,80.28
 1073363,2015,8,1073358,Division Game,W,78.92,77.66
 1073363,2015,9,1073420,Division Game,W,120.78,96.42
-1073363,2016,1,1073370,Division Game,W,97.06,95
+1073363,2016,1,1073370,Division Game,W,97.06,95.0
 1073363,2016,10,1087309,Non-Division Game,L,78.14,93.74
 1073363,2016,11,1115989,Division Game,L,77.58,79.68
 1073363,2016,12,1073420,Division Game,W,73.24,58.06
@@ -171,9 +171,9 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073363,2016,9,1107405,Division Game,L,73.9,81.08
 1073363,2017,1,1073358,Division Game,W,99.84,71.64
 1073363,2017,10,1073361,Non-Division Game,W,88.96,59.32
-1073363,2017,11,1115989,Division Game,W,78,65.02
+1073363,2017,11,1115989,Division Game,W,78.0,65.02
 1073363,2017,12,1107405,Division Game,L,115.92,126.62
-1073363,2017,13,1073370,Division Game,W,97.92,96
+1073363,2017,13,1073370,Division Game,W,97.92,96.0
 1073363,2017,14,1073358,Playoff Game,W,106.18,51.54
 1073363,2017,15,1107405,Playoff Game,W,131.68,107.88
 1073363,2017,16,1087309,Championship,L,60.1,94.46
@@ -187,7 +187,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073363,2017,9,1073420,Division Game,L,67.72,79.62
 1073363,2018,1,1073370,Division Game,W,91.94,68.32
 1073363,2018,2,1107405,Division Game,W,108.78,107.48
-1073363,2018,3,1073671,Non-Division Game,L,91,99.44
+1073363,2018,3,1073671,Non-Division Game,L,91.0,99.44
 1073370,2014,1,1107405,Division Game,L,96.92,113.24
 1073370,2014,10,1087309,Non-Division Game,L,111.68,162.22
 1073370,2014,11,1073358,Division Game,L,63.62,69.7
@@ -195,7 +195,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073370,2014,13,1073363,Division Game,L,75.46,106.98
 1073370,2014,14,1073671,Consolation Game,L,59.06,121.74
 1073370,2014,2,1115989,Division Game,W,89.8,63.62
-1073370,2014,3,1089754,Non-Division Game,L,99.44,109
+1073370,2014,3,1089754,Non-Division Game,L,99.44,109.0
 1073370,2014,4,1073358,Division Game,L,93.68,103.08
 1073370,2014,5,1073420,Division Game,W,94.72,83.94
 1073370,2014,6,1073363,Division Game Commish Edit,W,114.32,75.6
@@ -216,7 +216,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073370,2015,7,1073395,Non-Division Game,L,48.3,80.5
 1073370,2015,8,1107405,Division Game,L,97.7,101.24
 1073370,2015,9,1115989,Division Game,L,66.32,85.16
-1073370,2016,1,1073363,Division Game,L,95,97.06
+1073370,2016,1,1073363,Division Game,L,95.0,97.06
 1073370,2016,10,1073671,Non-Division Game,L,81.4,97.52
 1073370,2016,11,1073358,Division Game,W,95.38,82.5
 1073370,2016,12,1115989,Division Game,W,105.66,57.26
@@ -226,7 +226,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073370,2016,2,1073420,Division Game,L,98.56,104.54
 1073370,2016,3,1087309,Non-Division Game,W,101.18,85.48
 1073370,2016,4,1073358,Division Game,L,93.9,95.48
-1073370,2016,5,1115989,Division Game,W,101,68.92
+1073370,2016,5,1115989,Division Game,W,101.0,68.92
 1073370,2016,6,1107405,Division Game,L,88.56,93.14
 1073370,2016,7,1089754,Non-Division Game,L,29.44,94.74
 1073370,2016,8,1073363,Division Game,L,61.2,94.98
@@ -235,7 +235,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073370,2017,10,1075098,Non-Division Game,W,76.06,65.18
 1073370,2017,11,1073358,Division Game,L,80.94,92.78
 1073370,2017,12,1073420,Division Game,L,74.46,111.48
-1073370,2017,13,1073363,Division Game,L,96,97.92
+1073370,2017,13,1073363,Division Game,L,96.0,97.92
 1073370,2017,15,1073420,Consolation Game,L,72.74,75.28
 1073370,2017,16,1075098,Consolation Game,L,25.1,94.88
 1073370,2017,2,1115989,Division Game,W,92.72,71.16
@@ -261,7 +261,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073395,2014,5,1075098,Division Game,W,102.94,91.26
 1073395,2014,6,1073671,Division Game,W,112.06,97.2
 1073395,2014,7,1073358,Non-Division Game,W,100.3,58.94
-1073395,2014,8,1073361,Division Game,W,94.12,75
+1073395,2014,8,1073361,Division Game,W,94.12,75.0
 1073395,2014,9,1087309,Division Game,L,73.26,88.76
 1073395,2015,1,1073361,Division Game,L,88.96,91.62
 1073395,2015,10,1073420,Non-Division Game,L,79.32,85.02
@@ -295,8 +295,8 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073395,2016,8,1073671,Division Game,W,97.84,72.2
 1073395,2016,9,1075098,Division Game,W,98.98,84.64
 1073395,2017,1,1073361,Division Game,W,95.34,55.12
-1073395,2017,10,1073420,Non-Division Game,W,101.04,75
-1073395,2017,11,1089754,Division Game,W,125,96.26
+1073395,2017,10,1073420,Non-Division Game,W,101.04,75.0
+1073395,2017,11,1089754,Division Game,W,125.0,96.26
 1073395,2017,12,1075098,Division Game,L,63.88,86.24
 1073395,2017,13,1073671,Division Game,L,76.82,77.66
 1073395,2017,15,1075098,Consolation Game,W,104.32,94.64
@@ -308,7 +308,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073395,2017,6,1073671,Division Game,L,64.52,74.64
 1073395,2017,7,1073370,Non-Division Game,L,90.42,121.22
 1073395,2017,8,1073361,Division Game,L,101.4,111.18
-1073395,2017,9,1087309,Division Game,L,62,89.46
+1073395,2017,9,1087309,Division Game,L,62.0,89.46
 1073395,2018,1,1073671,Division Game,W,108.84,106.96
 1073395,2018,2,1075098,Division Game,L,62.14,106.84
 1073395,2018,3,1107405,Non-Division Game,L,112.4,133.22
@@ -316,7 +316,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073420,2014,10,1073361,Non-Division Game,W,63.56,56.76
 1073420,2014,11,1107405,Division Game,L,65.12,99.02
 1073420,2014,12,1073370,Division Game,L,82.72,107.04
-1073420,2014,13,1073358,Division Game,W,131.24,100
+1073420,2014,13,1073358,Division Game,W,131.24,100.0
 1073420,2014,14,1107405,Playoff Game,W,124.7,97.92
 1073420,2014,15,1073363,Playoff Game,L,65.4,80.8
 1073420,2014,16,1073361,Playoff Game 3rd place,W,88.38,57.36
@@ -359,7 +359,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073420,2016,8,1073358,Division Game,L,78.92,124.4
 1073420,2016,9,1073370,Division Game,W,126.16,88.08
 1073420,2017,1,1115989,Division Game,W,65.94,24.9
-1073420,2017,10,1073395,Non-Division Game,L,75,101.04
+1073420,2017,10,1073395,Non-Division Game,L,75.0,101.04
 1073420,2017,11,1107405,Division Game,L,88.3,117.32
 1073420,2017,12,1073370,Division Game,W,111.48,74.46
 1073420,2017,13,1073358,Division Game,L,61.12,80.54
@@ -411,7 +411,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073671,2016,1,1073395,Division Game,L,84.32,106.26
 1073671,2016,10,1073370,Non-Division Game,W,97.52,81.4
 1073671,2016,11,1075098,Division Game,W,92.5,71.44
-1073671,2016,12,1073361,Division Game,L,85,110.66
+1073671,2016,12,1073361,Division Game,L,85.0,110.66
 1073671,2016,13,1089754,Division Game,L,66.44,82.84
 1073671,2016,14,1115989,Consolation Game,W,68.38,63.06
 1073671,2016,15,1073370,Consolation Game,L,88.16,112.74
@@ -419,7 +419,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073671,2016,3,1073363,Non-Division Game,L,90.94,100.48
 1073671,2016,4,1075098,Division Game,L,60.68,75.98
 1073671,2016,5,1073361,Division Game,W,96.08,87.38
-1073671,2016,6,1089754,Division Game,L,64.2,82
+1073671,2016,6,1089754,Division Game,L,64.2,82.0
 1073671,2016,7,1073358,Non-Division Game,W,112.58,80.18
 1073671,2016,8,1073395,Division Game,L,72.2,97.84
 1073671,2016,9,1087309,Division Game,L,79.22,165.68
@@ -439,7 +439,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1073671,2017,9,1073361,Division Game,W,106.32,73.26
 1073671,2018,1,1073395,Division Game,L,106.96,108.84
 1073671,2018,2,1087309,Division Game,W,118.62,116.34
-1073671,2018,3,1073363,Non-Division Game,W,99.44,91
+1073671,2018,3,1073363,Non-Division Game,W,99.44,91.0
 1075098,2014,1,1087309,Division Game,W,102.76,96.76
 1075098,2014,10,1115989,Non-Division Game,W,109.7,100.2
 1075098,2014,11,1073671,Division Game,W,72.56,58.32
@@ -469,7 +469,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1075098,2015,5,1073395,Division Game,W,85.94,68.44
 1075098,2015,6,1073361,Division Game,L,63.7,94.08
 1075098,2015,7,1073363,Non-Division Game,L,80.28,90.78
-1075098,2015,8,1087309,Division Game,W,104.98,74
+1075098,2015,8,1087309,Division Game,W,104.98,74.0
 1075098,2015,9,1089754,Division Game,L,102.08,136.1
 1075098,2016,1,1073361,Division Game,L,85.4,100.8
 1075098,2016,10,1115989,Non-Division Game,W,117.38,77.26
@@ -483,13 +483,13 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1075098,2016,5,1089754,Division Game,W,110.36,105.66
 1075098,2016,6,1087309,Division Game,W,104.44,80.82
 1075098,2016,7,1073420,Non-Division Game,L,68.76,112.82
-1075098,2016,8,1073361,Division Game,L,97,104.7
+1075098,2016,8,1073361,Division Game,L,97.0,104.7
 1075098,2016,9,1073395,Division Game,L,84.64,98.98
 1075098,2017,1,1087309,Division Game Commish Edit,W,113.8,87.48
 1075098,2017,10,1073370,Non-Division Game,L,65.18,76.06
 1075098,2017,11,1073671,Division Game,L,85.96,107.3
 1075098,2017,12,1073395,Division Game,W,86.24,63.88
-1075098,2017,13,1073361,Division Game,W,93,80.96
+1075098,2017,13,1073361,Division Game,W,93.0,80.96
 1075098,2017,14,1115989,Consolation Game,W,89.1,76.14
 1075098,2017,15,1073395,Consolation Game,L,94.64,104.32
 1075098,2017,16,1073370,Consolation Game,W,94.88,25.1
@@ -508,7 +508,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1087309,2014,10,1073370,Non-Division Game,W,162.22,111.68
 1087309,2014,11,1073361,Division Game,W,115.58,76.22
 1087309,2014,12,1073671,Division Game,W,98.04,71.46
-1087309,2014,13,1089754,Division Game,L,91.8,137
+1087309,2014,13,1089754,Division Game,L,91.8,137.0
 1087309,2014,15,1073671,Consolation Game,W,87.7,42.92
 1087309,2014,16,1073358,Consolation Game,L,78.9,81.8
 1087309,2014,2,1073395,Division Game,W,108.46,83.04
@@ -533,7 +533,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1087309,2015,5,1073671,Division Game,L,78.46,82.7
 1087309,2015,6,1089754,Division Game,L,95.82,136.02
 1087309,2015,7,1073420,Non-Division Game,L,94.28,107.14
-1087309,2015,8,1075098,Division Game,L,74,104.98
+1087309,2015,8,1075098,Division Game,L,74.0,104.98
 1087309,2015,9,1073395,Division Game,L,96.14,97.56
 1087309,2016,1,1089754,Division Game,W,135.44,135.2
 1087309,2016,10,1073363,Non-Division Game,W,93.74,78.14
@@ -563,7 +563,7 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1087309,2017,6,1089754,Division Game,W,126.58,87.88
 1087309,2017,7,1073420,Non-Division Game,W,96.86,79.92
 1087309,2017,8,1075098,Division Game,W,70.82,65.3
-1087309,2017,9,1073395,Division Game,W,89.46,62
+1087309,2017,9,1073395,Division Game,W,89.46,62.0
 1087309,2018,1,1089754,Division Game,W,128.9,71.24
 1087309,2018,2,1073671,Division Game,L,116.34,118.62
 1087309,2018,3,1073370,Non-Division Game,L,76.94,82.76
@@ -571,11 +571,11 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1089754,2014,10,1073358,Non-Division Game,W,77.84,55.58
 1089754,2014,11,1073395,Division Game,L,92.38,92.74
 1089754,2014,12,1073361,Division Game,L,76.26,111.52
-1089754,2014,13,1087309,Division Game,W,137,91.8
+1089754,2014,13,1087309,Division Game,W,137.0,91.8
 1089754,2014,15,1073358,Consolation Game,L,88.28,104.76
 1089754,2014,16,1073671,Consolation Game,W,86.48,36.92
 1089754,2014,2,1075098,Division Game,L,89.74,94.28
-1089754,2014,3,1073370,Non-Division Game,W,109,99.44
+1089754,2014,3,1073370,Non-Division Game,W,109.0,99.44
 1089754,2014,4,1073395,Division Game,L,70.4,106.58
 1089754,2014,5,1073361,Division Game,L,97.28,101.68
 1089754,2014,6,1087309,Division Game,W,119.02,84.34
@@ -608,13 +608,13 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1089754,2016,3,1073420,Non-Division Game,L,74.74,98.9
 1089754,2016,4,1073395,Division Game,W,89.02,70.54
 1089754,2016,5,1075098,Division Game,L,105.66,110.36
-1089754,2016,6,1073671,Division Game,W,82,64.2
+1089754,2016,6,1073671,Division Game,W,82.0,64.2
 1089754,2016,7,1073370,Non-Division Game,W,94.74,29.44
 1089754,2016,8,1087309,Division Game,L,67.2,76.1
 1089754,2016,9,1073361,Division Game,L,55.9,75.54
 1089754,2017,1,1073671,Division Game,L,58.68,98.84
 1089754,2017,10,1073358,Non-Division Game,L,83.36,102.98
-1089754,2017,11,1073395,Division Game,L,96.26,125
+1089754,2017,11,1073395,Division Game,L,96.26,125.0
 1089754,2017,12,1073361,Division Game,W,101.06,83.1
 1089754,2017,13,1087309,Division Game,W,96.96,77.9
 1089754,2017,14,1073671,Playoff Game,W,116.56,102.94
@@ -733,14 +733,14 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1115989,2016,2,1073358,Division Game,W,144.34,102.36
 1115989,2016,3,1073361,Non-Division Game,L,69.64,121.54
 1115989,2016,4,1073363,Division Game,L,62.04,95.3
-1115989,2016,5,1073370,Division Game,L,68.92,101
+1115989,2016,5,1073370,Division Game,L,68.92,101.0
 1115989,2016,6,1073420,Division Game,L,65.96,107.9
 1115989,2016,7,1087309,Non-Division Game,L,87.22,112.68
 1115989,2016,8,1107405,Division Game,W,97.76,87.62
 1115989,2016,9,1073358,Division Game,L,90.46,98.42
 1115989,2017,1,1073420,Division Game,L,24.9,65.94
 1115989,2017,10,1073671,Non-Division Game,L,75.92,86.56
-1115989,2017,11,1073363,Division Game,L,65.02,78
+1115989,2017,11,1073363,Division Game,L,65.02,78.0
 1115989,2017,12,1073358,Division Game,L,88.98,113.28
 1115989,2017,13,1107405,Division Game,L,62.92,107.58
 1115989,2017,14,1075098,Consolation Game,L,76.14,89.1
@@ -755,3 +755,15 @@ team_id,season,week,team_id_opp,matchup_type,result,score_team,score_opp
 1115989,2018,1,1107405,Division Game,L,90.02,117.82
 1115989,2018,2,1073358,Division Game,L,84.3,87.8
 1115989,2018,3,1073361,Non-Division Game,L,76.48,97.3
+1073358,2018,4,1073370,Division Game,L,90.74,145.96
+1073361,2018,4,1087309,Division Game,W,92.5,85.38
+1073363,2018,4,1115989,Division Game,W,117.76,106.98
+1073370,2018,4,1073358,Division Game,W,145.96,90.74
+1073395,2018,4,1089754,Division Game,L,100.92,119.5
+1073420,2018,4,1107405,Division Game,L,83.96,125.16
+1073671,2018,4,1075098,Division Game,W,94.18,77.4
+1075098,2018,4,1073671,Division Game,L,77.4,94.18
+1087309,2018,4,1073361,Division Game,L,85.38,92.5
+1089754,2018,4,1073395,Division Game,W,119.5,100.92
+1107405,2018,4,1073420,Division Game,W,125.16,83.96
+1115989,2018,4,1073363,Division Game,L,106.98,117.76
