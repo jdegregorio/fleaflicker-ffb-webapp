@@ -489,8 +489,8 @@ def saveNew( df_new , filepath ):
 
 # Define Variables
 league_id = '154290'
-filepath_points = 'C:/scripts/data/points.csv'
-filepath_schedules = 'C:/scripts/data/schedules.csv'
+filepath_points = 'C:/automation/data/points.csv'
+filepath_schedules = 'C:/automation/data/schedules.csv'
 
 # Check for new data
 weeks_new_points = checkNew(league_id, filepath_points)
