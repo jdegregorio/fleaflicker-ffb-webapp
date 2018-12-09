@@ -308,8 +308,11 @@ def getSchedules( league_id , weeks_new ):
     # Create list to store matchup data
     schedule_data = []
 
-    for week in weeks_new:
-        season = week[0]
+    # Extract New Seasons
+    seasons_new = [item[0] for item in weeks_new]
+    seasons_new = list(set(seasons_new))
+
+    for season in seasons_new:
 
         # Gather team information
         df_teams = getTeams(league_id, season)
